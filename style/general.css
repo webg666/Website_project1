@@ -100,7 +100,7 @@
  .navmenu {
     display: flex;
     position: relative  ;
-    margin-left: 240px;
+    margin-left: 230px;
 
     
  }
@@ -271,7 +271,8 @@ footer a{
     margin-bottom: 10px;
 }
 footer .follow{
-    margin: 20px;
+    margin: 5px;
+    
 }
 footer .follow i{
     color: #465b52 ;
@@ -419,7 +420,7 @@ footer a:hover{
             }
             footer .logo{
                 margin-bottom: 15px;
-                height: 4vh;
+                height: 30px;
             
             }
             footer h4{
