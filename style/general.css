@@ -247,6 +247,7 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 footer .col{
     display: flex;
     flex-direction: column;
@@ -447,3 +448,4 @@ footer a:hover{
                 margin:5px 0px 0px 0px;
             }
     }
+

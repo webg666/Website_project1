@@ -159,6 +159,51 @@
   
 
   /*SHOP-RESPONSIVE*/
+  @media(max-width:1000px){
+    #shop-banner{
+        width:100%;
+        display: flex;
+        min-height: 30vh;
+        padding: 0px 0px;
+        font-size: 18px;
+        color: #6C1919;
+        background-position: 10%;
+        align-items: center;
+        
+        
+        
+        
+      }
+      #shop-banner h1{
+        padding-left: 50%;
+        margin-right: 5%;
+        text-align: center;
+        margin-left: 0px;
+        
+      }
+      #product1{
+        font-size: 13px;
+     }  
+     #product1 h2 {
+        font-size: 20px;
+    }
+    #product1 p {
+        font-size: 14px;
+
+    }
+     #product1 .pro-container{
+            justify-content: center;
+            justify-self: end;
+    }
+
+     #product1 .pro{
+            margin: 15px;
+           
+        }
+      
+
+}
+
 @media(max-width:480px){
     #shop-banner{
         width:100%;
