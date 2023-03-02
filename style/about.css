@@ -28,7 +28,8 @@
 .info-about{
     display: flex;
     align-items: self-start;
-    margin: 20px  40px;
+    padding-top:30px ;
+    margin-left: 30px;
 }
 
 .More{
@@ -82,7 +83,7 @@
     .info-about{
         text-align: center;
         display: block;
-        margin: 20px  0px;
+        padding: 20px  0px;
         position: relative;
     }
     

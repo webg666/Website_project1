@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     font-family: 'Inter', sans-serif;
     list-style: none;
     text-decoration: none;
   } 
+  
   button {
     font-size: 14px;
     font-weight: 600;
@@ -38,8 +38,6 @@
   \*-----------------------------------*/
 
  header{
-
-    background: rgb(156,118,181);
     background: linear-gradient(180deg, rgba(156,118,181,1) 0%, rgba(225,126,115,1) 0%, rgba(229,144,57,1) 100%);
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     position: sticky;
@@ -51,6 +49,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 13px;
+    
+
  }
 
 
@@ -192,6 +192,278 @@
     transform: translate(0% , 0%) scale(1);
     
 }
+
+
+/*-------------------login*/
+#login {
+    display: none;
+    position: absolute;
+    top:50% ;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    max-height: calc(100vh - 10px);
+    overflow-y: scroll;     
+    z-index: 1;
+
+}
+#login::-webkit-scrollbar{
+    display: none;
+}
+
+#login h1{
+    text-align: center;
+    padding:   20px ;
+    border-bottom:1px solid silver ;
+}
+#login form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .text_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.text_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.text_field label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+
+
+}
+.text_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background:brown ;
+    transition: .5s;
+
+}
+.text_field input:focus ~ label,
+.text_field input:valid ~ label{
+    top: -5px;
+    color: brown;
+
+}
+.text_field input:focus ~ span::before,
+.text_field input:valid ~ span::before{
+    width: 100%;
+
+}
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: brown;
+    border-radius: 25px;
+    font-size: 18px;
+    color:#e9f4fb ;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+
+}
+input[type="submit"]:hover{
+    border-color: brown;
+    transition: .5s;
+}
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+.signup_link a{
+    color: brown;
+    text-decoration: none;
+    cursor: pointer;
+}
+.signup_link a:hover{
+    text-decoration: underline;
+
+}
+
+
+
+/*-----------------------------------------------------------------------------signinxxxx */
+#signup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    max-height: calc(100vh - 10px);
+    overflow-y: scroll;
+    z-index: 1;
+
+
+    
+}
+#signup::-webkit-scrollbar{
+    display: none;
+}
+#signup h1{
+    text-align: center;
+    padding:   20px ;
+    border-bottom:1px solid silver ;
+}
+#signup form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+
+form .text_field1{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+
+    
+
+
+
+.text_field1 input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.text_field1 label{
+    position: absolute;
+    top:0%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+
+
+}
+.text_field1 span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background:brown ;
+    transition: .5s;
+
+}
+.text_field1 input:focus ~ label,
+.text_field1 input:valid ~ label{
+    top: -5px;
+    color: brown;
+
+}
+.text_field1 input:focus ~ span::before,
+.text_field1 input:valid ~ span::before{
+    width: 100%;
+
+}
+
+
+select{
+    outline:none;
+    border: 2px white;
+    color: #adadad;
+    width: 100%;
+    
+    
+    
+}
+
+
+input[type="date"]{
+    width: 100%;
+    color: #adadad;
+    
+    
+    
+    
+}
+
+
+#email_error{
+    display: none;
+    position: relative;
+    text-align: center;
+    margin: -20px 0px -15px 90px;
+    background: brown;
+    color: #fceae8;
+    border-radius: 5px;
+    
+    
+}
+#email_error:before{
+    display: block;
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 10px;
+    background: brown;
+    right: 10px;
+    top:-5px;
+    transform: rotate(45deg);
+}
+#phone_error{
+    display: none;
+    position: relative;
+    text-align: center;
+    margin: -20px 0px -15px 90px;
+    background: brown;
+    color: #fceae8;
+    border-radius: 5px;
+    
+    
+    
+}
+#phone_error:before{
+    display: block;
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 10px;
+    background: brown;
+    right: 10px;
+    top:-5px;
+    transform: rotate(45deg);
+}
+
+/* */
+
+
+
+
 /*NEWSLETTER-FORM*/
 #newsletter {
     display: flex;

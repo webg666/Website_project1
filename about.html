@@ -12,18 +12,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
       <!---ICONS-->
-      <link href='https://css.gg/profile.css' rel='stylesheet'>
-      <link href='https://css.gg/shopping-bag.css' rel='stylesheet'>
-      <link href='https://css.gg/search.css' rel='stylesheet'>
-      <link href='https://css.gg/menu.css' rel='stylesheet'>
-      <link href='https://css.gg/close.css' rel='stylesheet'>
-      <link href='https://css.gg/arrow-right.css' rel='stylesheet'>
-      <link href='https://css.gg/chevron-up.css' rel='stylesheet'>
+      <link href='https://unpkg.com/css.gg@2.0.0/icons/css/profile.css' rel='stylesheet'>
+      <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-bag.css' rel='stylesheet'>
+      <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+      <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
+      <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel='stylesheet'>
+      <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right.css' rel='stylesheet'>
+      <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-up.css' rel='stylesheet'>
 </head>
 <body>
     
   <!--Header-->
-  <header>
+  <header id="header">
     <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
    
     <ul class="navmenu">
@@ -38,14 +38,16 @@
       </div>
       <a><i onclick="search()" id="searchbtn" class="gg-search"></i></a>
       <a id="iconBag" class="icons" href="cart.html"><i class="gg-shopping-bag"></i></a>
-      <a id="iconProfile" class="icons" href="#"><i class="gg-profile"></i></a>
+      <a id="iconProfile" class="icons"><i  onclick="poplogin()" class="gg-profile"></i></a>
       <div  id="menu-icon">
         <i  class="gg-menu"></i>
       </div>
     
     </div>
   </header>
-  <div id="blur">
+
+<div id="blur">
+ <div id="filter">
   <div onclick="scrollUp()" id="scroll-up">
     <a><i  class="gg-chevron-up"></i></a>
   </div> 
@@ -54,7 +56,97 @@
 <div id="banner" class="about-banner">
     <h2>#Know us</h2>
     <p>Lorem ipsum dolor ist ka bro matse</p>
+</div> 
 </div>
+
+
+<section id="login">
+  <h1>Login</h1>
+  <form action="login.php" method="post">
+      <div class="text_field">
+          <input type="email" name="email" required > <span></span> <label>Email</label>
+      </div>
+      <div class="text_field">
+          <input type="password" name ="password" required><span></span> <label>Password</label>
+      </div>
+      <input type="submit" value="Login">
+      <div class="signup_link">
+          Not a member? <a onclick="popsign()">Sign up</a>
+          
+      </div>
+  </form>
+
+</section> 
+<section id="signup">
+  <h1>Sign up</h1>
+  <form  action="signup.php" method="post" id="form"  >
+      <div class="text_field" id="name" >
+          <input type="text" name="username" id ="username"  required > <span></span> <label>Username</label>
+      </div>
+      
+      <div class="text_field" id="pass" >
+          <input type="password" name="password" id ="password" required><span></span> <label>Password</label>
+      </div>
+      
+      <div class="text_field" id="mail">
+          <input type="text" name="email" id="email" required > <span></span> <label>Email</label>
+      </div>
+      <div id="email_error">Please enter a valid email address</div>
+      
+      <div class="text_field" id="phone">
+          
+          <input type="numbers" name="number" id ="phone_number" required  > <span></span> <label>Phone number </label>
+      </div>
+      <div id="phone_error">Please enter a valid phone number</div>
+      <div class="text_field1">
+          <input type="date" name="date" required > <span></span> <label>Date of birth</label>
+      </div>
+      <div class="text_field">
+      <select name="sex" >
+          <option selected disabled>Select a gender</option>
+          <option  value="male" >Male</option>
+          <option value="famele" >Famale</option>
+      </select>
+      
+      </div>
+      <div id=response></div>
+      <input type="submit" value="Sign up" id="submit" >
+      <div class="signup_link">
+          You are a member? <a onclick="poplogin()">Login</a>
+      </div>
+      
+  </form>
+ 
+  
+  
+<script>
+        $("#submit").click( function() {
+        
+          $.post( $("#form").attr("action"),
+                  $("#form :input").serializeArray(),
+              function (info) {
+        
+               
+                $("#response").empty();
+                $("#response").html(info);
+                
+               
+               
+              });
+        
+          $("#form").submit( function() {
+            return false;  
+          });
+        });
+
+</script>
+
+
+
+</section> 
+
+<div id="filter2">
+
 <div class="info-about">
     <img src="img/about/a6.jpg" alt="">
     <div class="More">
@@ -131,7 +223,8 @@
       <img src="img/pay/pay.png" alt="">
     </div>
   </footer>
-  </div>
+</div>
+
   <script src="script.js"></script>
 
 
