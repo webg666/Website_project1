@@ -182,6 +182,7 @@ username = addEventListener('input', check);
 password = addEventListener('input', check);
 email = addEventListener('input' ,check);
 function check(){
+    var check="true";
     //username checker:
     let username = document.getElementById("username");
     var name1= document.head.appendChild(document.createElement("style"));
@@ -190,6 +191,7 @@ function check(){
     if (username.value.length < 4){
         name1.innerHTML="#name span::before {background: brown;}";
         name2.innerHTML="#name input:valid ~ label, #name input:focus ~ label  {color: brown;}";
+        check="false";
     }else{
         
         name1.innerHTML="#name span::before {background: green;}";
@@ -206,6 +208,7 @@ function check(){
     if (password.value.length < 8){
         pass1.innerHTML="#pass span::before {background: brown;}";
         pass2.innerHTML="#pass input:valid ~ label, #pass input:focus ~ label  {color: brown;}";
+        check="false";
     }else{
         
         pass1.innerHTML="#pass span::before {background: green;}";
@@ -225,10 +228,12 @@ function check(){
         mail1.innerHTML="#mail span::before {background: brown;}";
         mail2.innerHTML="#mail input:valid ~ label, #mail input:focus ~ label  {color: brown;}";
         email_error.style.display="block";
+        check="false";
     }else if(email.value.length==0){
         mail1.innerHTML="#mail span::before {background: brown;}";
         mail2.innerHTML="#mail input:valid ~ label, #mail input:focus ~ label  {color: brown;}";
         email_error.style.display="none";
+        check="false";
 
     }else{
         mail1.innerHTML="#mail span::before {background: green;}";
@@ -248,13 +253,83 @@ function check(){
         phone1.innerHTML="#phone span::before {background: brown;}";
         phone2.innerHTML="#phone input:valid ~ label, #phone input:focus ~ label  {color: brown;}";
         phone_error.style.display="block";
+        check="false";
     }else if(phone_number.value.length==0){
         phone1.innerHTML="#phone span::before {background: brown;}";
         phone2.innerHTML="#phone input:valid ~ label, #phone input:focus ~ label  {color: brown;}";
         phone_error.style.display="none";
+        check="false";
     }else{
         phone1.innerHTML="#phone span::before {background: green;}";
         phone2.innerHTML="#phone input:valid ~ label, #phone input:focus ~ label  {color: green;}";
         phone_error.style.display="none";
     }
+    //date checker:
+    let day = document.getElementById("day");
+    var date1= document.head.appendChild(document.createElement("style"));
+    var date2= document.head.appendChild(document.createElement("style"));  
+    var today = new Date();
+    var today_dd = today.getDate();
+    var today_mm = today.getMonth() ; 
+    var today_yyyy = today.getFullYear();
+    today =  today_mm  + today_dd + today_yyyy ;
+    var user_date=new Date(day.value);
+    var user_dd = user_date.getDate();
+    var user_mm = user_date.getMonth(); 
+    var user_yyyy = user_date.getFullYear();
+    user_date =  user_mm + user_dd + user_yyyy;
+    
+
+    year=today_yyyy-user_yyyy;
+
+    if((year>16)&&(year<110)){
+        date1.innerHTML="#date span::before {background: green;}";
+        date2.innerHTML="#date input:valid ~ label, #date input:focus ~ label  {color: green;}";
+        date_error.style.display="none";
+
+
+    }
+    else if((year==16)&&user_mm>=today_mm){
+        if(user_dd>=today_dd){
+            date1.innerHTML="#date span::before {background: green;}";
+            date2.innerHTML="#date input:valid ~ label, #date input:focus ~ label  {color: green;}";
+            date_error.style.display="none";
+            
+        }
+    }
+
+    else if (day.value.length<=0){
+        date1.innerHTML="#date span::before {background: brown;}";
+        date2.innerHTML="#date input:valid ~ label, #date input:focus ~ label  {color: brown;}";
+        date_error.style.display="none";
+        check="false";
+
+    }
+    else {
+        date1.innerHTML="#date span::before {background: brown;}";
+        date2.innerHTML="#date input:valid ~ label, #date input:focus ~ label  {color: brown;}";
+        date_error.style.display="block";
+        check="false";
+
+    }
+   
+
+/*check for valid input*/
+let bt=document.getElementById("submit_signup");
+var bt_hover= document.head.appendChild(document.createElement("style"));
+if (check=="true"){
+    bt.disabled = false;
+    bt.style.cursor="pointer";
+    bt.style.opacity="1";
+    bt_hover.innerHTML="#submit_signup:hover {border-color: brown;}";
+
+}
+else if(check=="false"){
+    bt.disabled = true;
+    bt.style.cursor="default";
+    bt.style.opacity="0.8";
+    bt_hover.innerHTML="#submit_signup:hover {border-color: none;}";
+}
+
+
 }

@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!---ICONS-->
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/profile.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-bag.css' rel='stylesheet'>
@@ -73,7 +74,7 @@
         <div class="text_field">
             <input type="password" name ="password" required><span></span> <label>Password</label>
         </div>
-        <input type="submit" value="Login">
+        <input type="submit" id="submit_login" value="Login" disabled />
         <div class="signup_link">
             Not a member? <a onclick="popsign()">Sign up</a>
             
@@ -102,9 +103,10 @@
             <input type="numbers" name="number" id ="phone_number" required  > <span></span> <label>Phone number </label>
         </div>
         <div id="phone_error">Please enter a valid phone number</div>
-        <div class="text_field1">
-            <input type="date" name="date" required > <span></span> <label>Date of birth</label>
+        <div class="text_field1" id="date">
+            <input type="date" name="text" id="day" required > <span></span> <label>Date of birth</label>
         </div>
+        <div id="date_error">Please enter a valid date</div>
         <div class="text_field">
         <select name="sex" >
             <option selected disabled>Select a gender</option>
@@ -114,7 +116,7 @@
         
         </div>
         <div id=response></div>
-        <input type="submit" value="Sign up" id="submit" >
+        <input type="submit" value="Sign up" id="submit_signup" disabled />
         <div class="signup_link">
             You are a member? <a onclick="poplogin()">Login</a>
         </div>
