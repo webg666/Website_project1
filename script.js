@@ -25,6 +25,8 @@ window.onclick=function()
     const ldisplay = window.getComputedStyle(poplog).display;
     const popsign= document.getElementById('signup');
     const sdisplay= window.getComputedStyle(popsign).display;
+    var login_form = document.getElementById('login_form');
+    var signup_form = document.getElementById('signup_form');
 
     document.onmousedown=function()
     {
@@ -50,6 +52,8 @@ window.onclick=function()
             document.body.style.overflow='';
             document.getElementById('header').style.filter='';
             document.getElementById('header').style.position='';
+            login_form.reset();
+           
                 }
         if (sdisplay=='block'){
             popsign.style.display='none';
@@ -61,6 +65,7 @@ window.onclick=function()
             document.body.style.overflow='';
             document.getElementById('header').style.filter='';
             document.getElementById('header').style.position='';
+            signup_form.reset();
         }
 
     }
@@ -105,7 +110,8 @@ function poplogin(){
     document.getElementById('filter2').style.backdropFilter='brightness(80%)';
     document.getElementById('header').style.filter='brightness(40%)';
     document.getElementById('header').style.position='static';
-    scrollUp();
+    document.getElementById('signup_form').reset();
+    noscroll();
 
     
 }
@@ -120,7 +126,8 @@ function popsign(){
     document.getElementById('filter2').style.backdropFilter='brightness(80%)';
     document.getElementById('header').style.filter='brightness(40%)';
     document.getElementById('header').style.position='static';
-    scrollUp();
+    document.getElementById('login_form').reset();
+    noscroll();
 }
 
 function noscroll(){
@@ -220,11 +227,14 @@ function check(){
     let email = document.getElementById("email");
     var email_error= document.getElementById("email_error");
     var mail1= document.head.appendChild(document.createElement("style"));
-    var mail2= document.head.appendChild(document.createElement("style"));  
+    var mail2= document.head.appendChild(document.createElement("style"));
+    var email_text = email_error.innerText || email_error.textContent;
+    email_error.innerHTML = email_text;  
     var regExp_email= /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
 
     if (!(email.value.match(regExp_email))&&(email.value.length>0)){
+        email_error.innerHTML="Please enter a valid email address";
         mail1.innerHTML="#mail span::before {background: brown;}";
         mail2.innerHTML="#mail input:valid ~ label, #mail input:focus ~ label  {color: brown;}";
         email_error.style.display="block";
@@ -245,11 +255,14 @@ function check(){
     let phone_number = document.getElementById("phone_number");
     var phone_error= document.getElementById("phone_error");
     var phone1= document.head.appendChild(document.createElement("style"));
-    var phone2= document.head.appendChild(document.createElement("style"));  
+    var phone2= document.head.appendChild(document.createElement("style"));
+    var phone_text = phone_error.innerText || phone_error.textContent;
+    phone_error.innerHTML = phone_text;  
     var regExp_phone= /^\d{10}$/;
 
 
     if (!(phone_number.value.match(regExp_phone))&&(phone_number.value.length>0)){
+        phone_error.innerHTML = "Please enter a valid phone number";
         phone1.innerHTML="#phone span::before {background: brown;}";
         phone2.innerHTML="#phone input:valid ~ label, #phone input:focus ~ label  {color: brown;}";
         phone_error.style.display="block";
@@ -331,5 +344,17 @@ else if(check=="false"){
     bt_hover.innerHTML="#submit_signup:hover {border-color: none;}";
 }
 
+
+}
+function pass_show(){
+    var pass = document.getElementById("password");
+    var icon = document.getElementById("pass_show")
+    if (pass.type=="password"){
+        pass.type="text";
+        icon.className = "fa-solid fa-eye-slash";
+    }else{
+        pass.type="password";
+        icon.className = "fa-solid fa-eye";
+    }
 
 }

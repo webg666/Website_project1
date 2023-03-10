@@ -506,6 +506,25 @@ input[type="date"]{
     top:-5px;
     transform: rotate(45deg);
 }
+
+#response{
+    opacity:0;
+    position: absolute;
+    cursor: default;
+}
+
+#pass_show{
+    position: absolute;
+    margin-top: 15px;
+    right:5px;
+    color: #adadad;
+    transition: 0.4s;
+    cursor: pointer;
+
+}
+#pass_show:hover{
+    color:black;
+}
 /* */
 
 
@@ -777,5 +796,14 @@ footer a:hover{
             width: 100%;
 
         }
+        #email_error{
+
+            margin: -20px 0px -15px 50px;
+          } 
+
+        #phone_error{
+            margin: -20px 0px -15px 50px;
+
+          } 
 
     }
