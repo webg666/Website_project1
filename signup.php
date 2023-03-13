@@ -24,7 +24,7 @@ session_start();
        
           if(!empty($user_name)&&!empty($password)&&!empty($email)&&!empty($number)&&!empty($date)&&!empty($gender)){
                if(!(is_numeric($user_name))){
-                   $available="accept";
+                   $available="true";
                   
                     
                     
@@ -37,8 +37,8 @@ session_start();
                         
 
                         if ($user_email["email"]==$email){
-                         echo  "Email failed";
-                         $available="email";
+                         echo  "email";
+                         $available="false";
                         
                          
                         }
@@ -50,8 +50,8 @@ session_start();
                          $user_phone = mysqli_fetch_assoc($result);                   
                          
                          if ($user_phone["phone"]==$number){
-                               
-                              $available="phone";
+                              echo "phone"; 
+                              $available="false";
                               
                                    
                               }
@@ -60,7 +60,7 @@ session_start();
                          
                          
                          
-                         if($available=="accept"){
+                         if($available=="true"){
                               
                               
                               $user_id = random_num(20);

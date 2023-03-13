@@ -4,16 +4,17 @@
 session_start();
     include("connection.php");
     include("functions.php");
-    
+    $user_data=check_login($con);
+
     
     
     if ($_SERVER["REQUEST_METHOD"]="POST")
     {
     
        $email = $_POST["email"];
-       $password = $_POST["password"];
+       $password = $_POST["login_password"];
        
-
+       
        
        if(!empty($email) && !empty($password)){
         
@@ -27,16 +28,15 @@ session_start();
                     $user_data = mysqli_fetch_assoc($result);
                     if ($user_data['password']==$password){
                       
-                    
-                      $_SESSION['user_id']=$user_data['userid'];
+                    $_SESSION['user_id']=$user_data['user_id'];
+                    echo "login";
                       
-                      header("location:index.php");
-                      die;
                     
-                    }
-                    header("location:index.html");
-                    echo "kot";
+                    } 
+
+                    
                 }
+
        
                     
 

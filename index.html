@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,6 +21,7 @@
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-up.css' rel='stylesheet'>
+    
 </head>
 
 <body>
@@ -44,8 +45,8 @@
         <a><i onclick="search()" id="searchbtn" class="gg-search"></i></a>
         <a id="iconBag" class="icons" href="cart.html"><i class="gg-shopping-bag"></i></a>
         <a id="iconProfile" class="icons"><i  onclick="poplogin()" class="gg-profile"></i></a>
-        <div  id="menu-icon">
-          <i  class="gg-menu"></i>
+        <div>
+          <i id="menu-icon" class="gg-menu"></i>
         </div>
 
       
@@ -73,8 +74,10 @@
             <input type="text" name="email"  required > <span></span> <label>Email</label>
         </div>
         <div class="text_field">
-            <input type="password" name ="password" required><span></span> <label>Password</label>
+            <input type="password" name ="login_password" id ="login_password" required><span></span> <label>Password</label>
+            <a><i onclick="login_pass()" class="fa-solid fa-eye" id="login_pass"></i></a>
         </div>
+        <div id="status_login"></div>
         <input type="submit" id="submit_login" value="Login">
         <div class="signup_link">
             Not a member? <a onclick="popsign()">Sign up</a>
@@ -92,7 +95,7 @@
              
               $("#response").empty();
               $("#response").html(info);
-              check_av()
+              check_av1();  
              
             });
       
@@ -100,6 +103,26 @@
           return false;  
         });
       });
+     
+     function check_av1(){
+      var element = document.getElementById('response');
+      var status = document.getElementById('status_login');
+      var text = element.innerText || element.textContent;
+      element.innerHTML = text;
+      var status_text = status.innerText || status.textContent;
+      status.innerHTML = status_text;
+      
+      if (text=="login"){
+        status.innerHTML="*succes*";
+        localStorage.setItem("text",text);
+
+      }
+      else{
+        status.innerHTML="*email or password wrong*";
+
+      }
+     } 
+
       </script>
   </section> 
   <section id="signup">
@@ -109,8 +132,8 @@
             <input type="text" name="username" id ="username"  required > <span></span> <label>Username</label>
         </div>
         <div class="text_field" id="pass" >
-            <input type="password" name="password" id ="password" required><span></span> <label>Password</label>
-            <a><i onclick="pass_show()" class="fa-solid fa-eye" id="pass_show"></i></a>
+            <input type="password" name="password" id ="signup_password" required><span></span> <label>Password</label>
+            <a><i onclick="signup_pass()" class="fa-solid fa-eye" id="signup_pass"></i></a>
         </div>
         
         <div class="text_field" id="mail">
@@ -155,7 +178,7 @@
                  
                   $("#response").empty();
                   $("#response").html(info);
-                  check_av()
+                  check_av2()
                  
                 });
           
@@ -166,7 +189,7 @@
           
 
 
-  function check_av(){
+  function check_av2(){
   /*email infos*/
   let email = document.getElementById("email");
   var email_error= document.getElementById("email_error");

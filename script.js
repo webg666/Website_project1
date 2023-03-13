@@ -6,10 +6,12 @@ menu.onclick = () => {
     navbar.classList.toggle('active');
     if(navbar.classList.contains('active')){
         document.getElementById('blur').style.filter='blur(2px)';
+        menu.className="gg-close";
         
     }
     else{
         document.getElementById('blur').style.filter='none';
+        menu.className="gg-menu";
     
     }
 }
@@ -35,6 +37,7 @@ window.onclick=function()
         
             navbar.classList.toggle('active');
             document.getElementById('blur').style.filter='none';
+            menu1.className="gg-menu";
         }
         if(search.classList.contains("search-active")){
             search.classList.remove("search-active")
@@ -101,17 +104,26 @@ else if(search.classList.contains("search")){
 
 
 function poplogin(){
-    
-    document.getElementById('signup').style.display='none';
-    document.getElementById('login').style.display='block';
-    document.getElementById('filter').style.filter='brightness(40%)';
-    document.getElementById('filter').style.backdropFilter='brightness(80%)';
-    document.getElementById('filter2').style.filter='brightness(40%)';
-    document.getElementById('filter2').style.backdropFilter='brightness(80%)';
-    document.getElementById('header').style.filter='brightness(40%)';
-    document.getElementById('header').style.position='static';
-    document.getElementById('signup_form').reset();
-    noscroll();
+
+    if (localStorage.getItem("text")!="login"){
+        document.getElementById('signup').style.display='none';
+        document.getElementById('login').style.display='block';
+        document.getElementById('filter').style.filter='brightness(40%)';
+        document.getElementById('filter').style.backdropFilter='brightness(80%)';
+        document.getElementById('filter2').style.filter='brightness(40%)';
+        document.getElementById('filter2').style.backdropFilter='brightness(80%)';
+        document.getElementById('header').style.filter='brightness(40%)';
+        document.getElementById('header').style.position='static';
+        document.getElementById("signup_password").type="password";
+        document.getElementById("signup_pass").className = "fa-solid fa-eye";
+        document.getElementById("login_password").type="password";
+        document.getElementById("login_pass").className = "fa-solid fa-eye";
+        document.getElementById('signup_form').reset();
+        noscroll();
+    }
+    else if(localStorage.getItem("text")=="login"){
+        window.location.replace('http://localhost/website_project1/profile.php')
+    }
 
     
 }
@@ -208,7 +220,7 @@ function check(){
 
 
     //password checker:
-    let password = document.getElementById("password");
+    let password = document.getElementById("signup_password");
     var pass1= document.head.appendChild(document.createElement("style"));
     var pass2= document.head.appendChild(document.createElement("style"));    
 
@@ -346,9 +358,9 @@ else if(check=="false"){
 
 
 }
-function pass_show(){
-    var pass = document.getElementById("password");
-    var icon = document.getElementById("pass_show")
+function signup_pass(){
+    var pass = document.getElementById("signup_password");
+    var icon = document.getElementById("signup_pass")
     if (pass.type=="password"){
         pass.type="text";
         icon.className = "fa-solid fa-eye-slash";
@@ -356,5 +368,23 @@ function pass_show(){
         pass.type="password";
         icon.className = "fa-solid fa-eye";
     }
+
+}
+
+function login_pass(){
+    var pass = document.getElementById("login_password");
+    var icon = document.getElementById("login_pass")
+    if (pass.type=="password"){
+        pass.type="text";
+        icon.className = "fa-solid fa-eye-slash";
+    }else{
+        pass.type="password";
+        icon.className = "fa-solid fa-eye";
+    }
+
+}
+
+
+function logged_in(){
 
 }

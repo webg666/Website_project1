@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(255, 244, 252);
+}
+#profile{
+    display: flex;
+
+    flex-wrap: nowrap;
+
+}
+#profile .member_welcome{
+    width: 200px;
+    height: 200px;
+    background: aliceblue;
+    margin: 50px;
+    border-radius: 10px;
+    font-size: 16px;
+    
+    
+}
+#profile .content{
+    background: aliceblue;
+    width: 700px;
+    height: 400px;
+    margin: 50px;
+    border-radius: 10px;
+
+}
+.member_welcome h4{
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+.member_welcome a{
+    display: block;
+    cursor: pointer;
+    
+}
+.member_welcome a:hover{
+    color: brown;
+}
+
+#hello{
+    text-align: start;
+
+}
+#icon{
+    color: black;
+    font-size: 19px;
+}
+#orders{
+    width:200px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    background: white;
+    border-radius: 20px;
+
+}
+#setting{
+    padding-left: 10px;
+    margin-bottom: 5px;
+
+}
+#sign_out{
+    width:200px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    background: white;
+    border-radius: 20px;
+   
+}
+

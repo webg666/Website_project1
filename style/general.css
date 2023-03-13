@@ -195,7 +195,7 @@
 
 /*-------------------login*/
 #login {
-    display: none;
+    display: block;
     position: absolute;
     top:50% ;
     left: 50%;
@@ -324,6 +324,27 @@ form .text_field{
 
 }
 
+#login_pass{
+    position: absolute;
+    margin-top: 15px;
+    right:5px;
+    color: #adadad;
+    transition: 0.4s;
+    cursor: pointer;
+
+}
+#login_pass:hover{
+    color:black;
+}
+
+#status_login{
+    position: absolute;
+    bottom:140px;
+    left:40px;
+    font-size: 13px;
+    color: brown;
+    font-family: 'none';
+}
 
 
 /*-----------------------------------------------------------------------------signinxxxx */
@@ -513,7 +534,7 @@ input[type="date"]{
     cursor: default;
 }
 
-#pass_show{
+#signup_pass{
     position: absolute;
     margin-top: 15px;
     right:5px;
@@ -522,7 +543,7 @@ input[type="date"]{
     cursor: pointer;
 
 }
-#pass_show:hover{
+#signup_pass:hover{
     color:black;
 }
 /* */
