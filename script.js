@@ -119,17 +119,10 @@ function poplogin(){
         document.getElementById("login_password").type="password";
         document.getElementById("login_pass").className = "fa-solid fa-eye";
         document.getElementById('signup_form').reset();
-<<<<<<< HEAD
         document.body.style.overflow='hidden';
     }
     else if(localStorage.getItem("text")=="login"){
         window.location.replace('http://localhost/website_project_php/profile.php')
-=======
-        noscroll();
-    }
-    else if(localStorage.getItem("text")=="login"){
-        window.location.replace('http://localhost/website_project1/profile.php')
->>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
     }
 
     
@@ -146,11 +139,7 @@ function popsign(){
     document.getElementById('header').style.filter='brightness(40%)';
     document.getElementById('header').style.position='static';
     document.getElementById('login_form').reset();
-<<<<<<< HEAD
     document.body.style.overflow='hidden';
-=======
-    noscroll();
->>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
 }
 
 
@@ -389,7 +378,6 @@ function login_pass(){
 }
 
 
-<<<<<<< HEAD
 function signout(){
     localStorage.removeItem("text");
     $.ajax({
@@ -424,8 +412,5 @@ const search_products = () =>{
         }
 
     }
-=======
-function logged_in(){
->>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
 
 }

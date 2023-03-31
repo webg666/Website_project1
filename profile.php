@@ -4,7 +4,6 @@ session_start();
     include("connection.php");
     include("functions.php");
     $user_data=check_login($con);
-<<<<<<< HEAD
     if(!isset($_SESSION['user_id'])){
       header("location:index.html");
     
@@ -12,8 +11,6 @@ session_start();
     
 
     
-=======
->>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,13 +19,8 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="style/general.css">
     <link rel="stylesheet" href="style/profile.css" >
-=======
-    <link rel="stylesheet" href="style/profile.css" >
-    <link rel="stylesheet" href="style/general.css">
->>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,18 +65,13 @@ session_start();
       
       </div>
     </header>
-<<<<<<< HEAD
     <div onclick="scrollUp()" id="scroll-up">
     <a><i  class="gg-chevron-up"></i></a>
   </div> 
-=======
-    
->>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
     <section id="profile">
       <div class="member_welcome">
         <h4>Hello <?php echo $user_data['user_name'];?></h4>
       
-<<<<<<< HEAD
       <button id="orders"><i id="icon" class="fa-solid fa-cube"></i> My orders</button>
       <button id="setting"><i id="icon" class="fa-solid fa-gear"></i> Account settings</button>
       <button id="sign_out" onclick="signout()"><i id="icon" class="fa-solid fa-right-from-bracket"></i> Sign out</button>
@@ -110,16 +97,3 @@ session_start();
 
 </body>
 </html>
-=======
-      <a id="orders"><i id="icon" class="fa-solid fa-cube"></i> My orders</a>
-      <a id="setting"><i id="icon" class="fa-solid fa-gear"></i> Account settings</a>
-      <a id="sign_out"><i id="icon" class="fa-solid fa-right-from-bracket"></i> Sign out</a>
-      </div>
-      <div class="content">
-          <h4>dd</h4>
-
-      </div>    
-    </section>
-
-</body>
->>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
