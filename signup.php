@@ -61,6 +61,10 @@ session_start();
                          
                          
                          if($available=="true"){
+<<<<<<< HEAD
+=======
+                              
+>>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
                               
                               echo "true";
                               $user_id = random_num(20);

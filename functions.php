@@ -19,6 +19,7 @@ function check_login($con){
         $id = $_SESSION["user_id"];
         $query="select * from users where user_id = '$id' limit 1";
         $result=mysqli_query($con,$query);
+<<<<<<< HEAD
 
         if($result && mysqli_num_rows($result)>0)
             {
@@ -29,7 +30,17 @@ function check_login($con){
 }
 
 }
+=======
+>>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
 
+        if($result && mysqli_num_rows($result)>0)
+            {
+                $user_data = mysqli_fetch_assoc($result);
+                return $user_data;
+                
+            }
+}
 
+}
 
 ?>

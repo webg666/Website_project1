@@ -113,13 +113,21 @@
       status.innerHTML = status_text;
       
       if (text=="login"){
+<<<<<<< HEAD
         location.reload();
+=======
+        status.innerHTML="*succes*";
+>>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
         localStorage.setItem("text",text);
 
       }
       else{
         status.innerHTML="*email or password wrong*";
+<<<<<<< HEAD
         localStorage.removeItem("text",text);
+=======
+
+>>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
       }
      } 
 
@@ -235,9 +243,12 @@
     phone_error.style.display="block";
 
   }
+<<<<<<< HEAD
   else if(text=="true"){
     location.reload();
   }
+=======
+>>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
     
 }
 

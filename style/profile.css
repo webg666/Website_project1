@@ -1,21 +1,39 @@
 body{
+<<<<<<< HEAD
     background-color: #faf9f8;
 }
 #profile{
     display: flex;
+=======
+    background-color: rgb(255, 244, 252);
+}
+#profile{
+    display: flex;
+
+>>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
     flex-wrap: nowrap;
 
 }
 #profile .member_welcome{
+<<<<<<< HEAD
     font-size: 16px;
     margin-top: 50px;
     margin-left: 20px;
 
     
+=======
+    width: 200px;
+    height: 200px;
+    background: aliceblue;
+    margin: 50px;
+    border-radius: 10px;
+    font-size: 16px;
+>>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
     
     
 }
 #profile .content{
+<<<<<<< HEAD
     width: 100%;
     min-height: 700px;
     margin: 50px 50px 0 10px ;
@@ -42,10 +60,20 @@ body{
 
 
 
+=======
+    background: aliceblue;
+    width: 700px;
+    height: 400px;
+    margin: 50px;
+    border-radius: 10px;
+
+}
+>>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
 .member_welcome h4{
     margin-left: 5px;
     margin-bottom: 20px;
 }
+<<<<<<< HEAD
 button {
     font-size: 14px;
     padding: 3px 3px;
@@ -68,6 +96,16 @@ button:hover {
     
         }
 
+=======
+.member_welcome a{
+    display: block;
+    cursor: pointer;
+    
+}
+.member_welcome a:hover{
+    color: brown;
+}
+>>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
 
 #hello{
     text-align: start;
@@ -76,6 +114,30 @@ button:hover {
 #icon{
     color: black;
     font-size: 19px;
+<<<<<<< HEAD
  
+=======
+}
+#orders{
+    width:200px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    background: white;
+    border-radius: 20px;
+
+}
+#setting{
+    padding-left: 10px;
+    margin-bottom: 5px;
+
+}
+#sign_out{
+    width:200px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    background: white;
+    border-radius: 20px;
+   
+>>>>>>> a891bb3649e080812e7fdbf9cb292f132a2d571a
 }
 
