@@ -5,7 +5,25 @@
     font-family: 'Inter', sans-serif;
     list-style: none;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
   } 
+body{
+    overflow-y: overlay;
+  }
+body::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    
+ 
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0,0.2);
+    border-radius:5px ;    
+ 
+}
+
+
+
   
   button {
     font-size: 14px;
@@ -324,6 +342,27 @@ form .text_field{
 
 }
 
+#login_pass{
+    position: absolute;
+    margin-top: 15px;
+    right:5px;
+    color: #adadad;
+    transition: 0.4s;
+    cursor: pointer;
+
+}
+#login_pass:hover{
+    color:black;
+}
+
+#status_login{
+    position: absolute;
+    bottom:140px;
+    left:40px;
+    font-size: 13px;
+    color: brown;
+    font-family: 'none';
+}
 
 
 /*-----------------------------------------------------------------------------signinxxxx */
@@ -505,6 +544,25 @@ input[type="date"]{
     right: 10px;
     top:-5px;
     transform: rotate(45deg);
+}
+
+#response{
+    opacity:0;
+    position: absolute;
+    cursor: default;
+}
+
+#signup_pass{
+    position: absolute;
+    margin-top: 15px;
+    right:5px;
+    color: #adadad;
+    transition: 0.4s;
+    cursor: pointer;
+
+}
+#signup_pass:hover{
+    color:black;
 }
 /* */
 
@@ -777,5 +835,14 @@ footer a:hover{
             width: 100%;
 
         }
+        #email_error{
+
+            margin: -20px 0px -15px 50px;
+          } 
+
+        #phone_error{
+            margin: -20px 0px -15px 50px;
+
+          } 
 
     }

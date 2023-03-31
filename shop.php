@@ -1,3 +1,9 @@
+<?php
+  include("connection.php");
+  $sql = "SELECT * FROM  products";
+  $all_products = $con->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +35,7 @@
      
       <ul class="navmenu">
         <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="shop.html">Shop</a></li>
+        <li><a class="active" href="shop.php">Shop</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
 
@@ -59,82 +65,177 @@
     </div>
     <section id="login">
       <h1>Login</h1>
-      <form action="login.php" method="post">
+      <form action="login.php" method="post" id="login_form">
           <div class="text_field">
-              <input type="email" name="email" required > <span></span> <label>Email</label>
+              <input type="text" name="email"  required > <span></span> <label>Email</label>
           </div>
           <div class="text_field">
-              <input type="password" name ="password" required><span></span> <label>Password</label>
+              <input type="password" name ="login_password" id ="login_password" required><span></span> <label>Password</label>
+              <a><i onclick="login_pass()" class="fa-solid fa-eye" id="login_pass"></i></a>
           </div>
-          <input type="submit" value="Login" id="submit_login">
+          <div id="status_login"></div>
+          <input type="submit" id="submit_login" value="Login">
           <div class="signup_link">
               Not a member? <a onclick="popsign()">Sign up</a>
               
           </div>
       </form>
+      <script>
   
+        $("#submit_login").click( function() {
+        
+          $.post( $("#login_form").attr("action"),
+                  $("#login_form :input").serializeArray(),
+              function (info) {
+        
+               
+                $("#response").empty();
+                $("#response").html(info);
+                check_av1();  
+               
+              });
+        
+          $("#login_form").submit( function() {
+            return false;  
+          });
+        });
+       
+       function check_av1(){
+        var element = document.getElementById('response');
+        var status = document.getElementById('status_login');
+        var text = element.innerText || element.textContent;
+        element.innerHTML = text;
+        var status_text = status.innerText || status.textContent;
+        status.innerHTML = status_text;
+        
+        if (text=="login"){
+          localStorage.setItem("text",text);
+          location.reload();
+  
+        }
+        else{
+          status.innerHTML="*email or password wrong*";
+          localStorage.removeItem("text",text);
+        }
+       } 
+  
+        </script>
     </section> 
     <section id="signup">
       <h1>Sign up</h1>
-      <form  action="signup.php" method="post" id="form"  >
+      <form  action="signup.php" method="post" id="signup_form"  >
           <div class="text_field" id="name" >
               <input type="text" name="username" id ="username"  required > <span></span> <label>Username</label>
           </div>
-          
           <div class="text_field" id="pass" >
-              <input type="password" name="password" id ="password" required><span></span> <label>Password</label>
+              <input type="password" name="password" id ="signup_password" required><span></span> <label>Password</label>
+              <a><i onclick="signup_pass()" class="fa-solid fa-eye" id="signup_pass"></i></a>
           </div>
           
           <div class="text_field" id="mail">
               <input type="text" name="email" id="email" required > <span></span> <label>Email</label>
           </div>
-          <div id="email_error">Please enter a valid email address</div>
+          <div id="email_error"></div>
           
           <div class="text_field" id="phone">
               
               <input type="numbers" name="number" id ="phone_number" required  > <span></span> <label>Phone number </label>
           </div>
-          <div id="phone_error">Please enter a valid phone number</div>
-          <div class="text_field1">
-              <input type="date" name="date" required > <span></span> <label>Date of birth</label>
+          <div id="phone_error"></div>
+          <div class="text_field1" id="date">
+              <input type="date" name="date" id="day" required > <span></span> <label>Date of birth</label>
           </div>
+          <div id="date_error">Please enter a valid date</div>
           <div class="text_field">
           <select name="sex" >
               <option selected disabled>Select a gender</option>
               <option  value="male" >Male</option>
               <option value="famele" >Famale</option>
           </select>
-          
+     
           </div>
-          <div id=response></div>
-          <input type="submit" value="Sign up" id="submit_signup" disabled/>
+          <input type="submit" value="Sign up" id="submit_signup" disabled />
           <div class="signup_link">
               You are a member? <a onclick="poplogin()">Login</a>
           </div>
           
       </form>
      
-      
+  
       
   <script>
-            $("#submit").click( function() {
+  
+            $("#submit_signup").click( function() {
             
-              $.post( $("#form").attr("action"),
-                      $("#form :input").serializeArray(),
+              $.post( $("#signup_form").attr("action"),
+                      $("#signup_form :input").serializeArray(),
                   function (info) {
             
                    
                     $("#response").empty();
                     $("#response").html(info);
-                    
-                   
+                    check_av2()
                    
                   });
             
-              $("#form").submit( function() {
+              $("#signup_form").submit( function() {
                 return false;  
               });
             });
+            
+  
+  
+    function check_av2(){
+    /*email infos*/
+    let email = document.getElementById("email");
+    var email_error= document.getElementById("email_error");
+    var mail1= document.head.appendChild(document.createElement("style"));
+    var mail2= document.head.appendChild(document.createElement("style"));  
+    var element = document.getElementById('response');
+    var text = element.innerText || element.textContent;
+    element.innerHTML = text;
+    var email_text = email_error.innerText || email_error.textContent;
+    email_error.innerHTML = email_text;
+    /*phone infos*/
+    let phone_number = document.getElementById("phone_number");
+    var phone_error= document.getElementById("phone_error");
+    var phone1= document.head.appendChild(document.createElement("style"));
+    var phone2= document.head.appendChild(document.createElement("style"));
+    var phone_text = phone_error.innerText || phone_error.textContent;
+    phone_error.innerHTML = phone_text; 
+   
+  
+    if (text=="email"){
+      email_error.style.display="block";
+      mail1.innerHTML="#mail span::before {background: brown;}";
+      mail2.innerHTML="#mail input:valid ~ label, #mail input:focus ~ label  {color: brown;}";
+      email_error.innerHTML="This email address has been used already";
+    }
+    if (text=="phone"){
+      phone_error.innerHTML="This phone number has been used already";
+      phone1.innerHTML="#phone span::before {background: brown;}";
+      phone2.innerHTML="#phone input:valid ~ label, #mail input:focus ~ label  {color: brown;}";
+      phone_error.style.display="block";
+  
+    }
+    else if(text=="emailphone"){
+      /*email*/
+      email_error.style.display="block";
+      mail1.innerHTML="#mail span::before {background: brown;}";
+      mail2.innerHTML="#mail input:valid ~ label, #mail input:focus ~ label  {color: brown;}";
+      email_error.innerHTML="This email address has been used already";
+      /*phone*/
+      phone_error.innerHTML="This phone number has been used already";
+      phone1.innerHTML="#phone span::before {background: brown;}";
+      phone2.innerHTML="#phone input:valid ~ label, #mail input:focus ~ label  {color: brown;}";
+      phone_error.style.display="block";
+  
+    }
+    else if(text=="true"){
+      location.reload();
+  }
+      
+  }
   
   </script>
   
@@ -151,144 +252,44 @@
 
   <h2>Feature Products</h2>
   <p>Summer Colle tion New Modern Desing</p>
-  <div class="pro-container">
-      <div class="pro" onclick="window.location.href='sproduct.html';">
-        <img src="img/products/f1.jpg" alt="">
-        <div class="des">
-          <span>Adidas</span>
-          <h5>Happy T-Shirt</h5>
-          <h4>$30</h4>
-        </div>
-      </div>
-      <div class="pro">
-        <img src="img/products/f2.jpg" alt="">
-        <div class="des">
-          <span>Adidas</span>
-          <h5> Ocean T-Shirt</h5>
-          <h4>$35</h4>
-        </div>
-      </div>
-      <div class="pro">
-        <img src="img/products/f3.jpg" alt="">
-        <div class="des">
-          <span>Adidas</span>
-          <h5>Cartoon  T-Shirt</h5>
-          <h4>$40</h4>
-        </div>
-      </div>
-      <div class="pro">
-        <img src="img/products/f4.jpg" alt="">
-        <div class="des">
-          <span>Adidas</span>
-          <h5>I'm in japan T-Shirt</h5>
-          <h4>$30</h4>
-        </div>
-      </div>
-      <div class="pro">
-        <img src="img/products/f5.jpg" alt="">
-        <div class="des">
-          <span>Adidas</span>
-          <h5>Roses T-Shirt</h5>
-          <h4>$45</h4>
-        </div>
-      </div>
-      <div class="pro">
-        <img src="img/products/f6.jpg" alt="">
-        <div class="des">
-          <span>Adidas</span>
-          <h5>kotopulo jacket</h5>
-          <h4>$40</h4>
-        </div>
-      </div>
-      <div class="pro">
-        <img src="img/products/f7.jpg" alt="">
-        <div class="des">
-          <span>Adidas</span>
-          <h5>kotopulo pants</h5>
-          <h4>$35</h4>
-        </div>
-      </div>
-      
-      <div class="pro">
-        <img src="img/products/f8.jpg" alt="">
-        <div class="des">
-          <span>Adidas</span>
-          <h5>C7 Shirt</h5>
-          <h4>$50</h4>
-        </div>
-      </div>
-    </div>
 
+  <div class="pro-container">
+  <?php
+  while($row = mysqli_fetch_assoc($all_products)){
+?>
+      <div class="pro" onclick="window.location.href='sproduct.html';">
+        <img src="<?php echo $row["product_image"]?>" alt="">
+        <div class="des">
+          <span>Adidas</span>
+          <h5><?php echo $row["product_name"]?></h5>
+          <h4>$<?php echo $row["price"]?></h4>
+        </div>
+      </div>
+      <?php
+}
+?>
+    </div>
+    
+    
+   
+
+<!--
     <h2>New Arrivals</h2>
       <p>Summer Colle tion New Modern Desing</p>
       <div class="pro-container">
           <div class="pro">
-            <img src="img/products/n1.jpg" alt="">
+            <img src="" alt="">
             <div class="des">
-              <span>Adidas</span>
-              <h5>Light Blue Shirt</h5>
-              <h4>$30</h4>
-            </div>
-          </div>
-          <div class="pro">
-            <img src="img/products/n2.jpg" alt="">
-            <div class="des">
-              <span>Adidas</span>
-              <h5>Grey Shirt</h5>
-              <h4>$35</h4>
-            </div>
-          </div>
-          <div class="pro">
-            <img src="img/products/n3.jpg" alt="">
-            <div class="des">
-              <span>Adidas</span>
-              <h5>White Shirt</h5>
-              <h4>$40</h4>
-            </div>
-          </div>
-          <div class="pro">
-            <img src="img/products/n4.jpg" alt="">
-            <div class="des">
-              <span>Adidas</span>
-              <h5>Kotopulo T-Shirt</h5>
-              <h4>$30</h4>
-            </div>
-          </div>
-          <div class="pro">
-            <img src="img/products/n5.jpg" alt="">
-            <div class="des">
-              <span>Adidas</span>
-              <h5>Blue Shirt</h5>
-              <h4>$45</h4>
-            </div>
-          </div>
-          <div class="pro">
-            <img src="img/products/n6.jpg" alt="">
-            <div class="des">
-              <span>Adidas</span>
-              <h5>Gray Shorts</h5>
-              <h4>$40</h4>
-            </div>
-          </div>
-          <div class="pro">
-            <img src="img/products/n7.jpg" alt="">
-            <div class="des">
-              <span>Adidas</span>
-              <h5>Brown Shirt</h5>
-              <h4>$35</h4>
-            </div>
-          </div>
-          
-          <div class="pro">
-            <img src="img/products/n8.jpg" alt="">
-            <div class="des">
-              <span>Adidas</span>
-              <h5>Black Shirt</h5>
-              <h4>$50</h4>
+              <span></span>
+              <h5></h5>
+              <h4></h4>
             </div>
           </div>
         </div>
-  </section>
+      </section> 
+-->
+
+
 
   <!---Pages---->
 
@@ -361,4 +362,5 @@
     
 
 </body>
+
 </html>
