@@ -6,6 +6,8 @@
     list-style: none;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+    font-family: 'Italiana', serif;
+    font-weight: 700;
   } 
 body{
     overflow-y: overlay;
@@ -55,8 +57,8 @@ body::-webkit-scrollbar-thumb{
   \*-----------------------------------*/
 
  header{
-    background: linear-gradient(180deg, rgba(156,118,181,1) 0%, rgba(225,126,115,1) 0%, rgba(229,144,57,1) 100%);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    background: rgb(0, 0, 0);
+    background: transparent opacity 8%;
     position: sticky;
     width: 100%;
     top: 0; 
@@ -123,7 +125,7 @@ body::-webkit-scrollbar-thumb{
     
  }
  .navmenu a {
-    color: #5E3718;
+    color: #fff;
     font-size: 20px;
     text-transform: capitalize;
     padding: 20px;
@@ -155,7 +157,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .nav-icon i{
-    color: #5E3718;
+    color: #fff;
     font-weight: 25px;
     font-weight: 400;
     transition: all .42s ease;
@@ -168,7 +170,7 @@ body::-webkit-scrollbar-thumb{
 
 #menu-icon{
     font-size: 35px;
-    color:#5E3718 ;
+    color:#fff ;
     z-index: 10000px;
     cursor: pointer;
     display: none ;
@@ -213,7 +215,7 @@ body::-webkit-scrollbar-thumb{
 
 /*-------------------login*/
 #login {
-    display: block;
+    display: none;
     position: absolute;
     top:50% ;
     left: 50%;
@@ -567,102 +569,201 @@ input[type="date"]{
 /* */
 
 
-
-
-/*NEWSLETTER-FORM*/
-#newsletter {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background-image: url(../img/banner/b14.png);
-    background-repeat: no-repeat;
-    background-position: 20% 30%;
-    background-color: #041e42;
-    padding: 40px;
-}
-#newsletter h4{
-    font-size: 22px;
-    font-weight: 700;
-    color: #e8f6ea;
-}
-#newsletter p{
-    font-size: 22px;
+/****Cart***/
+ .cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: #f7fafb;
+    box-shadow: -2px 0 4px rgb(15, 15, 27);
+    transition: 0.3s ease-in;
+ }
+ .cart.active{
+    right: 0;
+ }
+ .cart-title{
+    text-align: center;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: #659aa3;
-}
-#newsletter p span{
-    color: #a39c65;
-}
-#newsletter input{
-    height: 3.14rem;
-    padding: 0 1.25em;
-    font-size: 14px;
-    width: 100%;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    outline: none ;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-#newsletter button{
-    background-color: #b3671b;
-    color:#e8f6ea;
-    white-space: nowrap;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
+    font-family: 'Italiana', serif;
+    margin-top: 2rem;
+ }
 
-#newsletter .form{
+ .cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1 rem;
+    margin-top: 1rem;
+ }
+ .cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+ }
+ .detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+ }
+
+ .cart-product-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+ }
+
+ .cart-price{
+    font-weight: 500;
+ }
+ .cart-quantity{
+    border: 1px solid black;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Italiana', serif;
+ }
+
+ #cart-remove{
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+ }
+
+ .total {
     display: flex;
-    width: 40%;
-}
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+ }
+
+ .total-title {
+    font-size: 1rem;
+    font-weight: 600;
+ }
+
+ .total-price{
+    margin-left: 15rem;
+ }
+
+ .btn-buy{
+    margin-top: 15px;
+    margin-left: 30%;
+ }
+ #close-cart{
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 1.6rem;
+  color: #000;
+  cursor: pointer;
+ }
+
+
 
 /*FOOTER*/
-footer{
+ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-footer .col{
+    margin-top: 100px;
+  }
+  
+  footer .col{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
-}
-footer .logo{
-    margin-bottom: 30px;
-
-}
-footer h4{
- font-size: 14px;
- padding-bottom: 20px;
-}
-footer p{
-    font-size: 13px;
-    margin: 0 0 8px 0;
-}
-footer a{
-    font-size: 13px;
+    margin-top: 55px;
+    font-family: 'Italiana', serif;
+    font-weight: 200;
+    padding: 0 170px;
+  }
+  
+  footer h2{
+  font-size: 23px;
+  padding-bottom: 25px;
+  }
+  footer h4{
+    font-size: 16px;
+    padding-bottom: 16px;
+  
+  }
+  footer a{
+    font-size: 10px;
     text-decoration: none;
     color: #1a1a1a;
     margin-bottom: 10px;
-}
-footer .follow{
-    margin: 5px;
-    
-}
-footer .follow i{
-    color: #465b52 ;
-    padding-right: 4px;
-    cursor: pointer;
-}
-footer .follow i:hover,
-footer a:hover{
-    color: #088178;
+  }
+  
+  
+  
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    margin-left: 40%;
+    transition: all 0.4s ease-out;
+  }
+  .wrapper__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+  }
+  
+  
+  .social-group__icon{
+    scale: 1.5;
+  
+  }
+  
+  
+  
+  .social-link--instagram {
+    color: #9a2970;
+  }
+  
+  .social-link .social-svg {
+    width: 5.8rem;
+    height: 2.8rem;
+  }
+  .social-link .social-svg .social-group__icon {
+    fill: #191308;
+    transition: all 0.2s;
+    transform-origin: -36% -30%;
+  }
+  .social-link .social-svg .social-group__inner-circle {
+    fill: transparent;
+    transform-origin: 50% 50%;
+    transition: all 0.2s;
+  }
+  .social-link .social-svg .social-group__outline {
+    stroke: #191308;
+    transform-origin: 50% 50%;
+    transition: all 0.2s;
+  }
+  .social-link .social-svg:hover .social-group__icon, .social-link .social-svg:active .social-group__icon, .social-link .social-svg:focus .social-group__icon {
+    fill: #fffbfa;
+    transition: all 0.45s;
+  }
+  .social-link .social-svg:hover .social-group__inner-circle, .social-link .social-svg:active .social-group__inner-circle, .social-link .social-svg:focus .social-group__inner-circle {
+    fill: currentColor;
+    transition: all 0.45s;
+  }
+  .social-link .social-svg:hover .social-group__inner-circle--instagram, .social-link .social-svg:active .social-group__inner-circle--instagram, .social-link .social-svg:focus .social-group__inner-circle--instagram {
+    fill: url(#simpleInsta) !important;
+  }
+  .social-link .social-svg:hover .social-group__outline, .social-link .social-svg:active .social-group__outline, .social-link .social-svg:focus .social-group__outline {
+    stroke: currentColor;
+    transform: scale(1.1);
+    transition: all 0.45s;
+  }
 
-}
 
 /*GENERAL-RESPONSIVE*/
 
@@ -682,7 +783,7 @@ footer a:hover{
             top: 0px;
             left: 0;
             right: 0;
-            background-color: rgba(229,144,57,1);
+            background-color: #000;
             position: absolute;
             flex-direction: column;
             transform: translate(0% , -100%)scale(1) ;
@@ -762,7 +863,8 @@ footer a:hover{
 
 /*news latter*/
             #newsletter {
-                padding:15px;
+                padding:25px;
+                margin-top: -18px;
             }
             #newsletter h4{
                 font-size: 13px;
@@ -786,34 +888,30 @@ footer a:hover{
             }
 /*footer*/
             footer{
+    
                 display:flex;
                 flex-wrap:wrap;
-                justify-content:space-between;
+             
             }
             footer .col{
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
-                margin-bottom: 20px;
+                width: 100%;
                   
             }
-            footer .logo{
-                margin-bottom: 15px;
-                height: 30px;
-            
-            }
+
             footer h4{
-             font-size: 13px;
-             padding-bottom: 10px; 
-             
+             font-size: 18px;
+             padding-bottom: 14px;
+             text-align: center; 
+             width: 100px;
              
             }
-            footer p{
-                font-size: 12px;
-                margin: 0 0 5px 0;
-                padding-left: 5px;
-                
-            }
+            footer h2{
+                font-size: 28px;
+                width: 200px;
+               }
+
             footer a{
                 font-size: 12px;
                 text-decoration: none;
@@ -821,8 +919,8 @@ footer a:hover{
                 margin-bottom: 5px;
                 
             }
-            footer .follow{
-                margin:5px 0px 0px 0px;
+            footer .wrapper{
+                margin:5px 0px 0px 20%;
             }
     }
 

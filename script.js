@@ -414,3 +414,65 @@ const search_products = () =>{
     }
 
 }
+
+
+// Cart
+
+let cartIcon = document.querySelector("#bag-ickon");
+let cart = document.querySelector('.cart');
+let closecart = document.querySelector('#close-cart');
+
+
+cartIcon.onclick = () => {
+    cart.classList.toggle('active');
+};
+
+closecart.onclick = () => {
+    cart.classList.remove('active');
+};
+
+
+//Cart Working
+
+var shippingRate =15.00;
+var fadeTime = 300;
+
+// Assign actions
+
+$('.cart-quantity input').change(function(){
+    updateQuantity(this);
+})
+
+$('.cart-remove').click( function() {
+    removeItem(this);
+  });
+
+  //Recalculate cart
+
+  function recalculateCart()
+  {
+    var subtotal = 0;
+
+  $('.cart-box').each(function () {
+    subtotal += parseFloat($(this).children('.total-title').text());
+  });
+  }
+
+  /* Calculate totals */
+  var subtotal ;
+  var shipping = (subtotal > 0 ? shippingRate : 0);
+  var total = subtotal  + shipping;
+
+  /* Update totals display */
+  $('.totals-value').fadeOut(fadeTime, function() {
+    $('#cart-subtotal').html(subtotal.toFixed(2));
+    $('#cart-tax').html(tax.toFixed(2));
+    $('#cart-shipping').html(shipping.toFixed(2));
+    $('#cart-total').html(total.toFixed(2));
+    if(total == 0){
+      $('.checkout').fadeOut(fadeTime);
+    }else{
+      $('.checkout').fadeIn(fadeTime);
+    }
+    $('.totals-value').fadeIn(fadeTime);
+  });
