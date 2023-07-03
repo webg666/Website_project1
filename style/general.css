@@ -31,8 +31,8 @@ body::-webkit-scrollbar-thumb{
     font-size: 14px;
     font-weight: 600;
     padding: 15px 30px;
-    color: #1a1a1a;
-    background-color: #E6C2B3;
+    color: #ffffff;
+    background-color: #1a1d1d;
     border-radius: 4px;
     cursor: pointer;
     border: none;
@@ -40,12 +40,10 @@ body::-webkit-scrollbar-thumb{
     transition: 0.2s;
 
     }
-    button.white {
-    font-size: 13px;
+    button:hover {
     font-weight: 600;
-    padding: 11px 18px;
-    color: #1a1a1a;
-    background-color: #e8f6ea;
+    color: #ffffff;
+    background-color: #000000;
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid white;

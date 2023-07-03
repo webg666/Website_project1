@@ -24,9 +24,9 @@ window.onclick=function()
     let iconbag=document.getElementById("iconBag")
     let iconprofile=document.getElementById("iconProfile")
     const poplog = document.getElementById('login');
-    const ldisplay = window.getComputedStyle(poplog).display;
+   
     const popsign= document.getElementById('signup');
-    const sdisplay= window.getComputedStyle(popsign).display;
+   
     var login_form = document.getElementById('login_form');
     var signup_form = document.getElementById('signup_form');
 
@@ -423,7 +423,7 @@ let cart = document.querySelector('.cart');
 let closecart = document.querySelector('#close-cart');
 
 
-cartIcon.onclick = () => {
+cartIcon.onclick = ()=>{
     cart.classList.toggle('active');
 };
 
@@ -432,47 +432,27 @@ closecart.onclick = () => {
 };
 
 
-//Cart Working
-
-var shippingRate =15.00;
-var fadeTime = 300;
-
-// Assign actions
-
-$('.cart-quantity input').change(function(){
-    updateQuantity(this);
-})
-
-$('.cart-remove').click( function() {
-    removeItem(this);
-  });
-
-  //Recalculate cart
-
-  function recalculateCart()
-  {
-    var subtotal = 0;
-
-  $('.cart-box').each(function () {
-    subtotal += parseFloat($(this).children('.total-title').text());
-  });
-  }
-
-  /* Calculate totals */
-  var subtotal ;
-  var shipping = (subtotal > 0 ? shippingRate : 0);
-  var total = subtotal  + shipping;
-
-  /* Update totals display */
-  $('.totals-value').fadeOut(fadeTime, function() {
-    $('#cart-subtotal').html(subtotal.toFixed(2));
-    $('#cart-tax').html(tax.toFixed(2));
-    $('#cart-shipping').html(shipping.toFixed(2));
-    $('#cart-total').html(total.toFixed(2));
-    if(total == 0){
-      $('.checkout').fadeOut(fadeTime);
-    }else{
-      $('.checkout').fadeIn(fadeTime);
+    /* Sproducts */
+    const activeImage = document.querySelector(".product-image .active");
+    const productImages = document.querySelectorAll(".product-thumb img");
+    function changeImage(e) {
+        activeImage.src = e.target.src;
     }
-    $('.totals-value').fadeIn(fadeTime);
-  });
+    productImages.forEach((image) => image.addEventListener("click", changeImage));
+
+    
+    /*Profile*/
+    
+    
+    const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
+
+allSideMenu.forEach(item=> {
+	const li = item.parentElement;
+
+	item.addEventListener('click', function () {
+		allSideMenu.forEach(i=> {
+			i.parentElement.classList.remove('active');
+		})
+		li.classList.add('active');
+	})
+});
