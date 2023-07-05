@@ -3,7 +3,7 @@
 
     font-size: 130%;
     font-family:Arial, Helvetica, sans-serif ;
-    background-image: url(../img/Hero-5.png);
+    background-image: url(../img/banner/Main.jpg);
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -53,7 +53,7 @@
 
 .row{
     display: flex;
-    padding-left: 10%;
+
     
 }
 
@@ -131,17 +131,14 @@
 /*HOME-RESPONSIVE*/
 @media  (max-width:1000px){
     #Hero{
-        background-image: url(../img/hero1_3_responsive.png);
+        background-image: url(../img/banner/Main.jpg);
         background-position: 69%  ;
         min-height: 100vh;
         padding-left: 3%;
         padding-bottom: 85%;
     }
 
-    .row{
-      flex-direction: column;
-      padding-left: 20%;
-    }
+    
     #product1 .pro-container{
         justify-content: center;
         justify-self: end;         
@@ -171,7 +168,7 @@
 @media  (max-width:768px){
 /*hero*/
 #Hero{
-    background-image: url(../img/hero1_3_responsive.png);
+    background-image: url(../img/banner/Main-tablet.jpg);
     background-position: 69%  ;
     padding-left: 3%;
     padding-bottom: 85%;
@@ -201,6 +198,7 @@
         padding-top: 20px;
         transform: scale(0.7);
        }
+      }
 
 
 
@@ -212,7 +210,7 @@
     
         font-size: 100%;
         font-family:Arial, Helvetica, sans-serif ;
-        background-image: url(../img/hero1_3_responsive.png);
+        background-image: url(../img/banner/Main-responsive.png);
         background-position: top 0% right 0%;
         background-size: cover;
         background-position:  69%;
@@ -258,6 +256,12 @@
 
         }
 
+        
+        .row{
+          flex-direction: column;
+          align-items: center;
+      
+        }
      #product1{
         font-size: 13px;
      }  

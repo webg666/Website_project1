@@ -169,26 +169,6 @@ window.addEventListener("scroll", () => {
 var path=window.location.pathname;
 var page=path.split("/").pop();
 
-if(page=="sproduct.html"){
-var Mainimg = document.getElementById("main-img");
-var Smallimg = document.getElementsByClassName("small-img");
-
-Smallimg[0].onclick = function (){
-    Mainimg.src = Smallimg[0].src;
-}
-Smallimg[1].onclick = function (){
-    Mainimg.src = Smallimg[1].src;
-}
-Smallimg[2].onclick = function (){
-    Mainimg.src = Smallimg[2].src;
-}
-Smallimg[3].onclick = function (){
-    Mainimg.src = Smallimg[3].src;
-}
-Smallimg[4].onclick = function (){
-    Mainimg.src = Smallimg[4].src;
-}
-}
 
 username = addEventListener('input', check);
 password = addEventListener('input', check);

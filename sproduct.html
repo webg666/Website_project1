@@ -19,6 +19,7 @@
   <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel='stylesheet'>
   <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right.css' rel='stylesheet'>
   <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-up.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/remove-r.css' rel='stylesheet'>
 </head>
 <body>
     
@@ -32,7 +33,7 @@
      
       <ul class="navmenu">
         <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="shop.php">Shop</a></li>
+        <li><a href="shop.php">Products</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
 
@@ -41,7 +42,42 @@
           <input type="text"  placeholder="Search">
         </div>
         <a><i onclick="search()" id="searchbtn" class="gg-search"></i></a>
-        <a id="iconBag" class="icons" href="#"><i class="gg-shopping-bag"></i></a>
+        <a id="iconBag" class="icons" ><i class="gg-shopping-bag" id="bag-ickon"></i></a>
+        <!--Cart-->
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <!--Content-->
+           <div class="cart-content">
+            <div class="cart-box">
+              <img src="img/2.png" alt="" class="cart-img">
+              <div class="detail-box">
+                <div class="cart-product-title">Aurora glasses</div>
+                <div class="cart-price">35$</div>
+                <input type="number" value="1" class="cart-quantity">
+              </div>
+
+              <!-------Remove Cart-->
+
+              <i class="gg-remove-r " id="cart-remove"></i>
+
+            </div>
+           </div>
+
+           <!--Total-->
+           <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$35</div>
+           </div>
+
+           <!--Buy Button-->
+           <button type="button" class="btn-buy">Buy Now</button>
+
+           <!--Cart-Close-->
+           <i class="gg-close" id="close-cart"></i>
+
+  
+
+        </div>
         <a id="iconProfile" class="icons"><i  onclick="poplogin()" class="gg-profile"></i></a>
         <div  id="menu-icon">
           <i  class="gg-menu"></i>
@@ -243,7 +279,7 @@
 
   <nav class="breadcrumb">
     <ol class="breadcrumb-content">
-     <li class="breadcrumb-item"><a href="">Home</a></li>
+     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
      <li class="breadcrumb-item"><a href="">Mens</a></li>
      <li class="breadcrumb-item-active"><a href="">Aurora Sunglases</a></li>
     </ol>
@@ -254,16 +290,16 @@
      <div class="product-content">
       <div class="product-media">
         <div class="product-image">
-          <img class="active" src="img/1.png" alt="">
+          <img class="active" src="img/products/1.png" alt="">
           <div class="product-thumb">
             <div class="thumb-item">
-              <img class="active" src="img/A1.png" alt="">
+              <img class="active" src="img/products/A1.png" alt="">
             </div>
             <div class="thumb-item">
-              <img src="img/A2.png" alt="">
+              <img src="img/products/A2.png" alt="">
             </div>
             <div class="thumb-item">
-              <img src="img/A3.png" alt="">
+              <img src="img/products/A3.png" alt="">
             </div>
           </div>
         </div>
@@ -292,22 +328,22 @@
   <h2 class="title">You may also like</h2>
   <div class="row">
     <div class="colum">
-      <a href=""><img src="img/1.png" alt=""></a>
+      <a href=""><img src="img/products/1.png" alt=""></a>
       <h4>Aurora s\Sunglases</h4>
       <p>$50.00</p>
     </div>
     <div class="colum">
-      <a href=""><img src="img/2.png" alt=""></a>
+      <a href=""><img src="img/products/2.png" alt=""></a>
       <h4>Aurora s\Sunglases</h4>
       <p>$50.00</p>
     </div>
     <div class="colum">
-      <a href=""><img src="img/3.png" alt=""></a>
+      <a href=""><img src="img/products/3.png" alt=""></a>
       <h4>Aurora s\Sunglases</h4>
       <p>$50.00</p>
     </div>
     <div class="colum">
-      <a href=""><img src="img/1.png" alt=""></a>
+      <a href=""><img src="img/products/1.png" alt=""></a>
       <h4>Aurora s\Sunglases</h4>
       <p>$50.00</p>
     </div>

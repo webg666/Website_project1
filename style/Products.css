@@ -102,27 +102,12 @@
 }
 
 @media(max-width:480px){
-    #shop-banner{
-        width:100%;
-        display: flex;
-        min-height: 30vh;
-        padding: 0px 0px;
-        font-size: 15px;
-        color: #6C1919;
-        background-position: 10%;
-        align-items: center;
-        
-        
-        
-        
-      }
-      #shop-banner h1{
-        padding-left: 50%;
-        margin-right: 5%;
-        text-align: center;
-        margin-left: 0px;
-        
-      }
+
+  .row{
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0px;
+  }
       
       
 
