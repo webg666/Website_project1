@@ -221,7 +221,8 @@ margin-right: 20px;
 		}
 	
 	.product-thumb {
-		width: 110%;
+		
+		width: 100%;
 		display: flex;
 		flex-direction: row;
 	}
@@ -230,9 +231,8 @@ margin-right: 20px;
 		
 	}
 	.thumb-item img {
-		width: 90px;
-		margin-left: 0%;
-
+		width: 100px;
+		margin-left: -35px
 	}
 
 	.product-desc {
