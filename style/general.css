@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb{
   button {
     font-size: 14px;
     font-weight: 600;
-    padding: 15px 30px;
+    padding: 11px 30px;
     color: #ffffff;
     background-color: #1a1d1d;
     border-radius: 4px;
@@ -671,6 +671,8 @@ input[type="date"]{
   color: #000;
   cursor: pointer;
  }
+  
+
 
 
 
