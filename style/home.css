@@ -151,6 +151,28 @@ h4 {
 }
 
 
+/****New Products**/
+
+#Why-Us{
+  height: 420px;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+
+.container1 h2{
+  text-align: center;
+  font-size: 35px;
+  font-family: Kaisei HarunoUmi;
+  padding-top: 25px;
+}
+.info{
+  justify-content: center;
+  display: flex;
+  gap: 60px;
+  margin-top: 20px;
+}
+
  /*News-letter*/
 
  #newsletter{
@@ -169,40 +191,52 @@ h4 {
  #newsletter{
  
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     background-color: #985b45;
-    height: 180px;
+    height: 250px;
 
  } 
 
 
 
-  .newstext h4{
+  .newstext h2{
+    text-align: center;
     font-family: Kaisei HarunoUmi;
     font-size: 38px;
     text-align: center;
+    font-weight:800 ;
+    padding-top: 20px;
   }
   .newstext p{
+
     font-family: Kaisei HarunoUmi;
-    font-size: 18px;
-    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    padding-top: 17px;
+ 
   }
 
   #newsletter input{
-  
-    height: 50px;
-    padding-left: 120px;
+    padding-left: 30px;
     font-size: 15px;
-    width: 170%;
+    width: 100%;
     border-radius: 4px;
     outline: none;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
   }
   .form {
-    margin-right: 25px;
+    width: 500px;
+    padding-bottom: 5%;
     display: flex;
+     
+      background-color: transparent;
+      box-sizing: border-box;
+      transition: box-shadow var(--duration-short) ease;
   }
+  
 
 
 
