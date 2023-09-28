@@ -38,6 +38,7 @@ nav a{
 }
 
 .product-main {
+	padding-left: 150px;
 	display: flex;
 	width: 100%;
 }
@@ -73,7 +74,6 @@ nav a{
 	overflow: hidden;
 }
 .thumb-item {
-	margin-top: 2%;
 	margin-left: 8%;
 	flex-basis: 10%;
 }
@@ -86,19 +86,27 @@ margin-right: 20px;
 	cursor: pointer;
 }
 
-.product-desc {
-	width:90%;
-}
+
 
 .desc-header {
-	border-bottom: 1px solid #f0f2ee;
+
+	margin-top: 10%;
+	border-bottom: 2px solid #cdcdcd;
 	padding-bottom: 30px;
+	width: 45%;
 }
 .price{
+	padding:  5px 0 ;
+	font-size: 32px;
+	font-weight: 600;
 	margin-top: 7%;
+	border-bottom: 2px solid #cdcdcd;
+	
 }
+
 .desc-header p{
 	margin-top: 5%;
+	font-size: 18px;
 }
 .desc-header button{
 	margin-top: 5%;
@@ -111,6 +119,32 @@ margin-right: 20px;
   .gridproduct{
 	  width: 50%;
   }
+
+
+
+  .add-to-cart{
+	position: relative;
+	display: inline-block;
+	background: #3e3e3f;
+	color: white;
+	border: none;
+	border-radius: 0;
+	padding: 1.25rem 2.5rem;
+	font-size: 1rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	transform: translateZ(0);
+	transition: color 0.3s ease;
+	letter-spacing: 0.0625rem;
+  }
+
+  
+
+  .add-to-cart:hover{
+	transform: scaleX(1);
+  }
+
+
   .container{
 	  padding-left: 10%;
 	  border-bottom: 0.125rem solid #e3dddd;
@@ -131,6 +165,7 @@ margin-right: 20px;
   
   .small-container{
 	  margin-top: 100px;
+	
   }
   
   .colum {
@@ -175,6 +210,8 @@ margin-right: 20px;
 	  transform: translateY(-30px);
 	}
 
+
+	
 	@media  (max-width:1000px){
 
 		.row {
