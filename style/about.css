@@ -16,11 +16,11 @@
 #About-banner h1{
     text-align: center;
     font-size: 84px;
-    color: rgb(95, 188, 85);
+    color: rgb(188, 148, 85);
     padding: 3%;
   
     font-weight: bolder;
-    backdrop-filter: brightness(63%);
+    backdrop-filter: brightness(83%);
 }
 
 
@@ -43,7 +43,7 @@
     padding-top: 8%;
     font-size: 21px;
     width: 500px;
-    font-weight: 300;
+    font-weight: 100;
 }
 
 .container img{
