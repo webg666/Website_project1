@@ -195,7 +195,7 @@ h4 {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #ac8171;
+    background-color: #82b39b;
     height: 250px;
 
  } 
@@ -258,6 +258,8 @@ h4 {
         padding-bottom: 85%;
     }
 
+
+
     
     #product1 .pro-container{
         justify-content: center;
@@ -283,6 +285,17 @@ h4 {
     #banner3 {
             padding:  0 50px;
         }
+
+        .info{
+          flex-direction: column;
+        }
+
+
+        #newsletter {
+        display: inline-block;
+        
+      
+      }
 
 }
 @media  (max-width:768px){

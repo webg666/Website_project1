@@ -1,123 +1,70 @@
+*{
+   
+    font-family: Kaisei HarunoUmi;
+    
+  } 
+
 /*About*/
-#banner.about-banner{
-    background-image: url(../img/banner/About-banner.jpg);
-    min-height: 35vh;
-    margin: 0;
+
+
+#About-banner{
+    background-image: url(../img/banner/About_banner.png);
+    width:100%;
+    background-size: cover;
+  
+}
+#About-banner h1{
+    text-align: center;
+    font-size: 84px;
+    color: rgb(95, 188, 85);
+    padding: 3%;
+  
+    font-weight: bolder;
+    backdrop-filter: brightness(63%);
+}
+
+
+#Our-story h2{
+    font-weight: 300;
+    font-size: 33px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-size:cover;
-    background-position: center;
-}
-#banner p{
     color: #000;
-}
-#banner h2{
-    color: #000;
+    padding-top: 10%;
 }
 
-.info-about img{
-    height: auto;
-    width: 40%;
-    border-radius: 10px;
-
-
-}
-.info-about{
+.container{
     display: flex;
-    align-items: self-start;
-    padding-top:30px ;
-    margin-left: 30px;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 9%;
+}
+ h3{
+    padding-top: 8%;
+    font-size: 21px;
+    width: 500px;
+    font-weight: 300;
 }
 
-.More{
-    margin: 30px 60px;
-    padding-left: 60px;
-}
-.More h2{
-    font-size: 30px;
-    font-weight: 600;
+.container img{
+    border-radius: 7%;
+    height: 490px;
 }
 
-.More p{
-    font-size: 20px;
-    padding-top: 10px;
-}
-
-#about-app{
+.more{
+    padding-top: 6%;
+    position: relative;
     text-align: center;
 }
 
-#about-app .video{
-    width: 70%;
-    height: 100%;
-    margin-top: 30px;
-}
-#about-app .video video{
-    height: 100%;
-    width: 70%;
-    border-radius: 20px;
-    margin-left: 35%;
-}
+.centered {
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
 
-
-
-@media(max-width:1000px){
-    #banner.about-banner{
-        min-height: 20vh;
-        margin: 0;
-        
-    }
-    #banner h2{
-        font-size: 25px;
-    }
-    .info-about img{
-        height: auto;
-        width: 50%;
-        border-radius: 10px;
-    
-    
-    }
-    .info-about{
-        text-align: center;
-        display: block;
-        padding: 20px  0px;
-        position: relative;
-    }
-    
-    .More{
-        padding-left: 0px;
-    }
-    .More h2{
-        font-size: 25px;
-        font-weight: 600;
-    }
-    
-    .More p{
-        font-size: 18px;
-        padding-top: 10px;
-    }
-    
-    #about-app{
-        text-align: center;
-    }
-    
-    #about-app .video{
-        width: 70%;
-        height: 100%;
-        margin-top: 30px;
-    }
-    #about-app .video video{
-        height: 100%;
-        width: 70%;
-        border-radius: 20px;
-        margin-left: 35%;
-    }
-    
-    
-        
-                
-        
-}
+  .more img{
+    height: 600px;
+    width: 100%;
+  }
