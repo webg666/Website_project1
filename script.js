@@ -45,7 +45,7 @@ window.onclick=function()
             iconprofile.classList.remove("icons-a")
             
         }
-        if (ldisplay=='block'){
+        if (lddisplay=='block'){
             poplog.style.display='none';
             popsign.style.display='none';
             document.getElementById('filter').style.filter='';
@@ -435,4 +435,20 @@ allSideMenu.forEach(item=> {
 		})
 		li.classList.add('active');
 	})
+});
+
+
+
+/*Scrol-animation*/
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+    } else {
+         entry.target.classList.remove('show');
+    }
+  });
+
 });

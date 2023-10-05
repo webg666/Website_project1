@@ -21,14 +21,14 @@
 
 #Hero h4{
   margin-bottom: 15px; 
-  color: rgb(95, 188, 85);
+  color: rgb(0, 2, 0);
   font-size: 33px;
   font-family: Kaisei HarunoUmi;
 
 }
 #Hero h2{
     font-family: 'Libre Baskerville', serif;
-    color: rgb(95, 188, 85);
+    color: rgb(1, 10, 0);
     font-size: 43px;
   
   }
@@ -167,6 +167,7 @@ h4 {
   padding-top: 25px;
 }
 .info{
+  position: relative;
   justify-content: center;
   display: flex;
   gap: 60px;
@@ -195,7 +196,7 @@ h4 {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #82b39b;
+    background-color: #d59f6f;
     height: 250px;
 
  } 
@@ -362,30 +363,29 @@ h4 {
     
     }
     #Hero h4{
-        margin-bottom: 5px;
-        
+        padding-top: 25%;
+        font-size: 56px;
         
       }
       #Hero h1{
-          font-size: 28px;
+          font-size: 48px;
           color: brown;
           margin-top: 5px;
           margin-bottom: 5px;
           
       }
       #Hero h2{
-        font-size: 18px;
+        font-size: 28px;
       }
       #Hero button{
         background-image: url(../img/button.png);
         background-color: transparent;
-        color: brown;
+        color: #000;
         border:0;
         background-repeat: no-repeat;
         cursor: pointer;
         font-size: 14px;
-        margin-top: 5px;
-        margin-left: -20px;
+        margin-top: 6px;
 
         }
 
@@ -433,6 +433,16 @@ h4 {
 
             font-size: 15px;
           
+        }
+
+
+        .info{
+          display: flex;
+          flex-direction: column;
+        }
+        .info img{
+          height: 230px;
+          height: 200px;
         }
      
 
