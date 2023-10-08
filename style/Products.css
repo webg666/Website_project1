@@ -5,7 +5,7 @@
     display: flex;
     min-height: 35vh;
     font-size: 27px;
-    color: #6C1919;
+    color: var(--highmid);
     background-size: cover;
     justify-content: center;
     align-items: center;
@@ -15,31 +15,7 @@
 
 
 
-  /*Categories*/
-
-  aside {
-    padding: 0 1rem;
-    overflow-y: auto;
-    padding-top: 10%;
-    padding-left: 2%;
-    position: absolute;
-  }
-  li {
-    list-style-type: none;
-    font-weight: 600;
-    color: #c1c1c1;
-    margin: 1rem 0;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  li:first-child {
-    color: rgb(24, 132, 64);
-  }
-
-
-  .shop {
-    margin-top: 2rem;
-  }
+  
 
   /*Shop Content */
   .row{
@@ -61,16 +37,18 @@
     /* border: radius 20px; */
   }
   .title {
+    padding-top: 15px;
+    font-size: 33px;
     text-align: center;
     margin: 0 auto 80px;
     position: relative;
     line-height: 60px;
-    color: #555;
+    color: var(--dark);
   }
   .title::after {
     content: "";
-    background: #ff523b;
-    width: 80px;
+    background: var(--lowmid);
+    width: 165px;
     height: 5px;
     border-radius: 5px;
     position: absolute;
@@ -80,7 +58,7 @@
   }
 
   h4 {
-    color: #555;
+    color: var(--dark);
     font-weight: normal;
   }
   .colum p {
@@ -91,15 +69,7 @@
   }
 
 
-.btn {
-  display: inline-block;
-  background: #ff523b;
-  color: #ffffff;
-  padding: 8px 30px;
-  margin: 30px 0;
-  border-radius: 30px;
-  transition: background 0.5s;
-}
+
 
 
 

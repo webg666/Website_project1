@@ -1,8 +1,4 @@
-*{
-   
-    font-family: Kaisei HarunoUmi;
-    
-  } 
+
 
 /*About*/
 
@@ -16,7 +12,7 @@
 #About-banner h1{
     text-align: center;
     font-size: 84px;
-    color: rgb(188, 148, 85);
+    color: var(--highmid);
     padding: 3%;
     font-weight: bolder;
     backdrop-filter: brightness(83%);
@@ -29,6 +25,7 @@
  }
 
  .Welcome h2{
+    color: var(--dark);
     font-size: 31px;
     font-weight: 50;
  }
@@ -36,7 +33,7 @@
 
 
 section.card {
-    background: #f6f6f6;
+    background: var(--bright);
     border-radius: 24px 24px 24px 48px;
     padding: 48px 48px 48px 308px;
     margin: 64px 0;
@@ -47,7 +44,7 @@ section.card {
     flex-direction: row;
     align-self: flex-start;
     position: relative;
-    box-shadow: 5px 0 0 0 rgba(204,204,204,0.3), -5px 0 0 0 rgba(204,204,204,0.3), 0 5px 0 0 rgba(204,204,204,0.3);
+    box-shadow: 5px 0 0 0 rgba(200, 166, 153, 0.3), -5px 0 0 0 rgba(204,204,204,0.3), 0 5px 0 0 rgba(204,204,204,0.3);
 }
 section.card .text-content {
     display: flex;
@@ -60,12 +57,13 @@ section.card .text-content h3 {
     max-width: 20ch;
 }
 section.card .text-content p {
+    color: var(--dark);
     margin: 16px 0 24px;
     max-width: 36ch;
 }
 section.card .text-content a {
-    border: 3px solid #000;
-    color: #000;
+    border: 3px solid var(--dark);
+    color: var(--dark);
     align-self: flex-start;
     text-decoration: none;
     padding: 16px 32px;

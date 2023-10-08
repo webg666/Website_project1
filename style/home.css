@@ -21,19 +21,19 @@
 
 #Hero h4{
   margin-bottom: 15px; 
-  color: rgb(0, 2, 0);
+  color:var(--lowmid);
   font-size: 33px;
   font-family: Kaisei HarunoUmi;
 
 }
 #Hero h2{
     font-family: 'Libre Baskerville', serif;
-    color: rgb(1, 10, 0);
+    color:var(--lowmid);
     font-size: 43px;
   
   }
   #Hero h2 span{
-    color: #e8f6ea;
+    color: var(--dark);
   }
 
 
@@ -55,17 +55,16 @@
 
 .title1 {
   margin-top: 200px;
-  font-family: Kaisei HarunoUmi;
   font-size: 30px;
   text-align: center;
   margin: 35px auto 80px;
   position: relative;
   line-height: 60px;
-  color: #000000;
+  color: var(--dark);
 }
 .title1::after {
   content: "";
-  background: #ff523b;
+  background: var(--lowmid);
   width: 260px;
   height: 5px;
   border-radius: 5px;
@@ -88,11 +87,10 @@
   
    .projetc-preiview-content h2 {
     text-align: center;
-    color: #000000;
-    font-family: Kaisei HarunoUmi;
+    color: var(--dark);
     font-size: 30px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 100;
     line-height: normal;
    }
 
@@ -117,18 +115,17 @@
   /* border: radius 20px; */
 }
 .title {
-  font-family: Kaisei HarunoUmi;
   font-size: 30px;
   text-align: center;
   text-align: center;
   margin: 50px auto 80px;
   position: relative;
   line-height: 60px;
-  color: #000000;
+  color: var(--dark);
 }
 .title::after {
   content: "";
-  background: #ff523b;
+  background: var(--lowmid);
   width: 160px;
   height: 5px;
   border-radius: 5px;
@@ -139,8 +136,7 @@
 }
 
 h4 {
-  font-family: Kaisei HarunoUmi;
-  color: #000000;
+  color: var(--dark);
   font-weight: normal;
 }
 .colum p {
@@ -156,14 +152,13 @@ h4 {
 #Why-Us{
   height: 420px;
   width: 100%;
-  background-color: aliceblue;
+
 }
 
 
 .container1 h2{
   text-align: center;
   font-size: 35px;
-  font-family: Kaisei HarunoUmi;
   padding-top: 25px;
 }
 .info{
@@ -182,7 +177,7 @@ h4 {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  background-color: #985b45;
+  background-color: var(--highmid);
   height: 180px;
 
 }
@@ -196,7 +191,7 @@ h4 {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #d59f6f;
+    background-color: var(--mid);
     height: 250px;
 
  } 
