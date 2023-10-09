@@ -975,10 +975,11 @@ input[type="date"]{
 
           } 
           footer{
-    
+            
             display:flex;
-    
-         
+            flex-direction: column;
+          
+                           
         }
         footer .col{
             display: flex;

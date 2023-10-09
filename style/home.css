@@ -147,7 +147,7 @@ h4 {
 }
 
 
-/****New Products**/
+/****why-us**/
 
 #Why-Us{
   height: 420px;
@@ -169,276 +169,208 @@ h4 {
   margin-top: 20px;
 }
 
- /*News-letter*/
 
- #newsletter{
- 
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: var(--highmid);
-  height: 180px;
-
-}
 
  /*News-letter*/
 
  #newsletter{
- 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: var(--mid);
-    height: 250px;
+  padding-top: 6%;
+  position: relative;
+  text-align: center;
+ }
 
- } 
-
-
-
-  .newstext h2{
-    text-align: center;
-    font-family: Kaisei HarunoUmi;
-    font-size: 38px;
-    text-align: center;
-    font-weight:800 ;
-    padding-top: 20px;
-  }
-  .newstext p{
-
-    font-family: Kaisei HarunoUmi;
-    font-size: 17px;
-    font-weight: 300;
-    padding-top: 17px;
- 
-  }
-
-  #newsletter input{
-    padding-left: 30px;
-    font-size: 15px;
-    width: 100%;
-    border-radius: 4px;
-    outline: none;
-    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
-  }
-  .form {
-   display: flex;
-   position: relative;
-   padding-bottom: 66px;
-
-  }
-
-  input [type="text"] {
-    border: none;
-    width: 460px;
-    height: 50px;
-  }
-  
+ label {
+  position: absolute;
+  top: 75%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+ }
  
 
+ #newsletter img{
+  height: 300px;
+  width: 100%;
+}
+
+
+#newsletter input{
+  font-size: 15px;
+  width: 300px;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+}
 
 
 
-
-
-
-/*HOME-RESPONSIVE*/
-@media  (max-width:1000px){
-    #Hero{
-        background-image: url(../img/banner/Main.jpg);
-        background-position: 69%  ;
-        min-height: 100vh;
-        padding-left: 3%;
-        padding-bottom: 85%;
-    }
-
-
-
-    
-    #product1 .pro-container{
-        justify-content: center;
-        justify-self: end;         
-        }
-    
-    #sm-banner .banner-box{
-            width:49.8%;
-            min-height:200px ;
-            background-size:cover;
-            background-position:center;
-            padding: 40px;
-        }
-    #sm-banner{
-            padding: 0 50px;
-            
-        }
-    #banner3 .banner-box{
-            width: 33%;
-            min-height: 160px;
-        
-        }
-    #banner3 {
-            padding:  0 50px;
-        }
-
-        .info{
-          flex-direction: column;
-        }
-
-
-        #newsletter {
-        display: inline-block;
-        
-      
-      }
+.form {
+ display: flex;
 
 }
-@media  (max-width:768px){
-/*hero*/
-#Hero{
-    background-image: url(../img/banner/Main-tablet.jpg);
-    background-position: 69%  ;
-    padding-left: 3%;
-    padding-bottom: 85%;
+
+input [type="text"] {
+  border: none;
+  height: 50px;
 }
-#Hero button{
-    font-size: 18px;
-    margin-top: 3px;
-    }
-
-    
-#Hero h4{
-        margin-bottom: 3px;
-        
-      }
-#Hero h1{
-          color: brown;
-          margin-top: 3px;
-          margin-bottom: 3px;
-          
-      }
-
-
-#categories {
-        display: flex;
-        flex-direction: column;
-        padding-left: 5%;
-        padding-top: 20px;
-        transform: scale(0.7);
-       }
-      }
+ 
 
 
 
 
 
-@media(max-width:480px){
-    /* hero---------*/
-    #Hero{
-    
-        font-size: 100%;
-        font-family:Arial, Helvetica, sans-serif ;
-        background-image: url(../img/banner/Main-responsive.png);
-        background-position: top 0% right 0%;
-        background-size: cover;
-        background-position:  69%;
-        padding:0px 0px;
-        display:flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding-left: 10%;
-        padding-bottom:130%;
-        margin-bottom: 5%;
-        
-        
    
+
+
+  @media(max-width:480px){
+    /* Hero---------*/
+    #Hero{
+    
+      font-size: 100%;
+      background-image: url(../img/banner/Main-responsive.png);
+      background-position: top 0% right 0%;
+      background-size: cover;
+      background-position:  69%;
+      padding:0px 0px;
+      display:flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 10%;
+      padding-bottom:130%;
+      margin-bottom: 5%;
+      
+      
+ 
+      
+  
+  }
+  #Hero h4{
+      padding-top: 25%;
+      font-size: 56px;
+      
+    }
+
         
     
+    #Hero h2{
+      font-size: 28px;
     }
-    #Hero h4{
-        padding-top: 25%;
-        font-size: 56px;
-        
-      }
-      #Hero h1{
-          font-size: 48px;
-          color: brown;
-          margin-top: 5px;
-          margin-bottom: 5px;
-          
-      }
-      #Hero h2{
-        font-size: 28px;
-      }
-      #Hero button{
-        background-image: url(../img/button.png);
-        background-color: transparent;
-        color: #000;
-        border:0;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        font-size: 14px;
-        margin-top: 6px;
+    #Hero button{
+      background-image: url(../img/button.png);
+      background-color: transparent;
+      color: #000;
+      border:0;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 6px;
 
-        }
+      }
 
-        
-        .row{
-          flex-direction: column;
-          align-items: center;
-          padding-left: 0px;
       
-        }
-     #product1{
-        font-size: 13px;
-     }  
-     #product1 h2 {
-        font-size: 20px;
-    }
-    #product1 p {
-        font-size: 14px;
 
-    }
-     #product1 .pro-container{
-            justify-content: center;
-            justify-self: end;
-    }
-
-     #product1 .pro{
-            margin: 15px;
-           
-        }
-     #banner{
-            margin-bottom: 5%;
-        }
-        #banner button{
-            font-size: 12px;
-            padding: 10px 15px;
-
-            
-
-        }
-        #banner h4 {
-
-            font-size:11px;
-        }
-        #banner h2 {
-
-            font-size: 15px;
-          
-        }
+      /**------Categories--**/
 
 
-        .info{
+
+      .title1 {
+       font-size: 30px;
+      }
+
+      
+      #categories{
           display: flex;
           flex-direction: column;
-        }
-        .info img{
-          height: 230px;
-          height: 200px;
-        }
-     
+          justify-content: center;
+          align-items: center;
+         }
+        
+        
+         .padding-large img{
+          border-radius: 3%;
+          height: 400px;
+         }
+        
+         .projetc-preiview-content h2 {
+          text-align: center;
+          color: var(--dark);
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 100;
+          line-height: normal;
+         }
+
+
+         /****New Products**/
+
+.row{
+display: flex;
+flex-direction: column;
+padding-left: 10%;
+align-items: center;
+justify-content: center;
 
 }
+
+
+.colum img {
+width: 270px;
+border-radius: 14%;
+/* border: radius 20px; */
+}
+.title {
+font-size: 30px;
+text-align: center;
+text-align: center;
+margin: 50px auto 80px;
+position: relative;
+line-height: 60px;
+color: var(--dark);
+}
+.title::after {
+content: "";
+background: var(--lowmid);
+width: 160px;
+height: 5px;
+border-radius: 5px;
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+}
+
+h4 {
+color: var(--dark);
+font-weight: normal;
+}
+.colum p {
+font-size: 17px;
+}
+.colum:hover {
+transform: none;
+}
+
+
+/****why-us**/
+
+.info{
+  display: flex;
+  align-items: center;
+  flex-direction:column;
+  padding-bottom: 2000px;
+
+  gap: 60px;
+
+}
+
+.info img{
+  height: 250px;
+  width: 280px;
+}
+
+
+
+
+  }
+
+
