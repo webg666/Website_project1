@@ -3,7 +3,7 @@
 
     font-size: 130%;
     font-family:Arial, Helvetica, sans-serif ;
-    background-image: url(../img/banner/Main.jpg);
+    background-image: url(../img/banner/Main1.jpg);
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -162,7 +162,7 @@ h4 {
   padding-top: 25px;
 }
 .info{
-  position: relative;
+  position: absolute;
   justify-content: center;
   display: flex;
   gap: 60px;
@@ -174,26 +174,16 @@ h4 {
  /*News-letter*/
 
  #newsletter{
-  padding-top: 6%;
-  position: relative;
+  position: absolute;
+  background-image: url(../img/banner/Newsletter.png);
+
+  background-repeat: no-repeat;
   text-align: center;
  }
 
- label {
-  position: absolute;
-  top: 75%;
-  left: 49%;
-  transform: translate(-50%, -50%);
- }
- 
-
- #newsletter img{
-  height: 300px;
-  width: 100%;
-}
-
 
 #newsletter input{
+  
   font-size: 15px;
   width: 300px;
   border-radius: 4px;
@@ -205,7 +195,7 @@ h4 {
 
 .form {
  display: flex;
-
+justify-content: center;
 }
 
 input [type="text"] {
@@ -222,8 +212,8 @@ input [type="text"] {
 
 
   @media(max-width:480px){
-    /* Hero---------*/
-    #Hero{
+     /* Hero---------*/
+     #Hero{
     
       font-size: 100%;
       background-image: url(../img/banner/Main-responsive.png);
@@ -237,24 +227,24 @@ input [type="text"] {
       justify-content: center;
       padding-left: 10%;
       padding-bottom:130%;
-      margin-bottom: 5%;
+      margin-bottom: 5%;}
       
       
  
       
   
-  }
-  #Hero h4{
-      padding-top: 25%;
-      font-size: 56px;
+      #Hero h4{
+        padding-top: 25%;
+        font-size: 56px;
       
-    }
+        }
 
         
     
     #Hero h2{
       font-size: 28px;
     }
+
     #Hero button{
       background-image: url(../img/button.png);
       background-color: transparent;
@@ -303,74 +293,92 @@ input [type="text"] {
 
          /****New Products**/
 
-.row{
-display: flex;
-flex-direction: column;
-padding-left: 10%;
-align-items: center;
-justify-content: center;
+        .row{
+           display: flex;
+           flex-direction: column;
+           padding-left: 10%;
+           align-items: center;
+           justify-content: center;
 
-}
-
-
-.colum img {
-width: 270px;
-border-radius: 14%;
-/* border: radius 20px; */
-}
-.title {
-font-size: 30px;
-text-align: center;
-text-align: center;
-margin: 50px auto 80px;
-position: relative;
-line-height: 60px;
-color: var(--dark);
-}
-.title::after {
-content: "";
-background: var(--lowmid);
-width: 160px;
-height: 5px;
-border-radius: 5px;
-position: absolute;
-bottom: 0;
-left: 50%;
-transform: translateX(-50%);
-}
-
-h4 {
-color: var(--dark);
-font-weight: normal;
-}
-.colum p {
-font-size: 17px;
-}
-.colum:hover {
-transform: none;
-}
+           }
 
 
-/****why-us**/
+          .colum img {
+             width: 270px;
+             border-radius: 14%;
+             }
+
+
+ 
+         /****why-us**/
+
+            #Why-Us{
+              height: 1340px;
+              width: 100%;
+              align-items: center;
+ 
+                 }
 
 .info{
+
   display: flex;
+  flex-direction: column;
+  padding-left: 15%;
   align-items: center;
-  flex-direction:column;
-  padding-bottom: 2000px;
+  justify-content: center;
 
-  gap: 60px;
-
+  
 }
 
 .info img{
   height: 250px;
   width: 280px;
 }
+ 
+/*News-letter*/
+
+#newsletter{
+  background-image: url(../img/banner/Newsletter.png);
+
+  padding-top: 76%;
+  
+ }
+
+ label {
+  top: 710%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+ }
+ 
 
 
 
+#newsletter input{
 
+  font-size: 15px;
+  width: 250px;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.form {
+ display: flex;
+
+}
+
+input [type="text"] {
+  border: none;
+  height: 50px;
+}
+ 
   }
+   
+
+
+
+
 
 

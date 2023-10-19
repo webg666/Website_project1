@@ -697,54 +697,26 @@ input[type="date"]{
 /*FOOTER*/
  footer{
    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 100px;
+    display: none;
+    justify-content: space-around;
+
+
   }
   
-  footer .col{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    margin-top: 55px;
-    font-family: 'Italiana', serif;
-    font-weight: 200;
-    padding: 0 170px;
-  }
-  
-  footer h2{
-  font-size: 23px;
-  padding-bottom: 25px;
-  }
-  footer h4{
-    font-size: 16px;
-    padding-bottom: 16px;
-  
-  }
-  footer a{
-    font-size: 10px;
-    text-decoration: none;
-    color: var(--dark);
-    margin-bottom: 10px;
-  }
-  
-  
+
+
   
   .wrapper {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 200px;
-    height: 150px;
-    margin-left: 40%;
+    justify-content: left;
+    width: 100px;
+    height: 75px;
     transition: all 0.4s ease-out;
   }
   .wrapper__links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     width: 70%;
   }
   
@@ -919,41 +891,9 @@ input[type="date"]{
                 width: 80%;
             }
 /*footer*/
-            footer{
-    
-                display:flex;
-        
-             
-            }
-            footer .col{
-                display: flex;
+           
 
-                width: 100%;
-                  
-            }
-
-            footer h4{
-             font-size: 18px;
-             padding-bottom: 14px;
-             text-align: center; 
-             width: 10px;
-             
-            }
-            footer h2{
-                font-size: 28px;
-                width: 200px;
-               }
-
-            footer a{
-                font-size: 12px;
-                text-decoration: none;
-                color: #1a1a1a;
-                margin-bottom: 5px;
-                
-            }
-            footer .wrapper{
-                margin:5px 0px 0px 20%;
-            }
+           
     }
 
     @media(max-width:480px){
@@ -981,37 +921,6 @@ input[type="date"]{
           
                            
         }
-        footer .col{
-            display: flex;
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-              
-        }
-
-        footer h4{
-         font-size: 18px;
-         padding-bottom: 14px; 
-         width: 10px;
-         margin-right: 150px;
-         
-        }
-        footer h2{
-            font-size: 28px;
-            width: 200px;
-
-           }
-
-        footer a{
-            font-size: 12px;
-            text-decoration: none;
-            color: #1a1a1a;
-            margin-bottom: 5px;
-      
-            
-        }
-        footer .wrapper{
-            margin:5px 0px 0px 20%;
-        }
+     
 
     }
