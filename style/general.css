@@ -7,12 +7,18 @@
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
     font-weight: 700;
+
+     /*colors*/
     --dark:#51352d;
     --bright:#f7c69e;
     --mid:#9f624b;
     --highmid:#6e2c1c;
     --lowmid:#c26d43;
-  } 
+    --light-black: rgba(0, 0, 0, 0.89);
+    --black: #000;
+    --white: #fff;
+    --grey: #aaa;
+}
 body{
     overflow-y: overlay;
   }
@@ -61,7 +67,7 @@ body::-webkit-scrollbar-thumb{
   \*-----------------------------------*/
 
  header{
-    background: var(--lowmid);
+    background: var(--black);
     background: transparent opacity 8%;
     position: sticky;
     width: 100%;
@@ -686,88 +692,77 @@ input[type="date"]{
 
 
 /*FOOTER*/
- footer{
-    justify-content: space-around;
-   display: flex;
-  }
+ /* //........ Footer ...... // */
 
-  footer .col{
-    padding-top: 70px;
-   
-  }
-  footer .col h2{
-    font-size: 32px;
-  }
-  
-  footer a h4{
-    padding: 20px;
-    color: #000;
-  }
+footer {
+    width: 100%;
+    background: var(--black);
+}
 
+.footer-container .content_1 img {
+    height: 25px;
+    width: 180px;
+}
 
-
-
-  
-  .wrapper {
+.footer-container {
     display: flex;
-    justify-content: left;
-    width: 100px;
-    height:100px;
-    transition: all 0.4s ease-out;
-  }
-  .wrapper__links {
-    display: flex;
-    justify-content: left;
-  }
-  
-  
-  .social-group__icon{
-    scale: 1.5;
-  
-  }
-  
-  
-  
-  .social-link--instagram {
-    color: #9a2970;
-  }
-  
-  .social-link .social-svg {
-    width: 5.8rem;
-    height: 2.8rem;
-  }
-  .social-link .social-svg .social-group__icon {
-    fill: #191308;
-    transition: all 0.2s;
-    transform-origin: -36% -30%;
-  }
-  .social-link .social-svg .social-group__inner-circle {
-    fill: transparent;
-    transform-origin: 50% 50%;
-    transition: all 0.2s;
-  }
-  .social-link .social-svg .social-group__outline {
-    stroke: #191308;
-    transform-origin: 50% 50%;
-    transition: all 0.2s;
-  }
-  .social-link .social-svg:hover .social-group__icon, .social-link .social-svg:active .social-group__icon, .social-link .social-svg:focus .social-group__icon {
-    fill: #fffbfa;
-    transition: all 0.45s;
-  }
-  .social-link .social-svg:hover .social-group__inner-circle, .social-link .social-svg:active .social-group__inner-circle, .social-link .social-svg:focus .social-group__inner-circle {
-    fill: currentColor;
-    transition: all 0.45s;
-  }
-  .social-link .social-svg:hover .social-group__inner-circle--instagram, .social-link .social-svg:active .social-group__inner-circle--instagram, .social-link .social-svg:focus .social-group__inner-circle--instagram {
-    fill: url(#simpleInsta) !important;
-  }
-  .social-link .social-svg:hover .social-group__outline, .social-link .social-svg:active .social-group__outline, .social-link .social-svg:focus .social-group__outline {
-    stroke: currentColor;
-    transform: scale(1.1);
-    transition: all 0.45s;
-  }
+    justify-content: space-between;
+    padding: 60px 0;
+}
 
+.footer-container h4 {
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.footer-container a {
+    display: block;
+    text-decoration: none;
+    color: var(--grey);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.footer-container .content_1 p,
+.footer-container .content_4 p {
+    color: var(--grey);
+    margin: 25px 0;
+    font-size: 14px;
+}
+
+.footer-container .content_4 input[type="email"] {
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+    outline: none;
+    padding: 15px 0;
+}
+
+.footer-container .content_4 .f-mail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container .content_4 .bx {
+    color: var(--white);
+}
+
+.f-design {
+    width: 100%;
+    color: var(--white);
+    text-align: center;
+}
+
+.f-design .f-design-txt {
+    border-top: 1px solid var(--grey);
+    padding: 25px 0;
+    font-size: 14px;
+    color: var(--grey);
+}
 
 /*GENERAL-RESPONSIVE*/
 
@@ -787,7 +782,7 @@ input[type="date"]{
             top: 0px;
             left: 0;
             right: 0;
-            background-color: var(--lowmid);
+            background-color: var(--black);
             position: absolute;
             flex-direction: column;
             transform: translate(0% , -100%)scale(1) ;
@@ -889,32 +884,18 @@ input[type="date"]{
             margin: -20px 0px -15px 50px;
 
           } 
-          footer{
-            
-            display:flex;
-            flex-direction: column; 
-            align-items: center;
-           
-        }
-      
-        footer .col h2{
-            width: 80px;
-            text-align: left;
-        }
-        
-          footer .col{
-            padding-top: 70px;
-           
-          }
-          footer .col h2{
-            font-size: 32px;
-          }
-          
-          footer a h4{
-            text-align: left;
-            padding: 20px;
-            color: #000;
-          }
      
+          .footer-container {
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .footer-container .content_1 {
+            margin-bottom: 30px;
+        }
+        .best-seller img {
+            padding-top: 40px;
+        }
+
 
     }
