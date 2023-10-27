@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 100;
     list-style: none;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
