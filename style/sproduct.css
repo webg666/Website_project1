@@ -62,7 +62,6 @@ nav a{
 	margin: 0;
     display: flex;
     justify-content: center;
-   align-items: center;
    
     
 }
@@ -188,6 +187,7 @@ nav a{
    /***Product page**/
    .product-main{
 	flex-direction: column;
+	align-items: center;
 }
    .product-desc {
 	width: 60%;
@@ -220,6 +220,7 @@ nav a{
 
 		.product-main{
 			flex-direction: column;
+			align-items: center;
 		}
 		.product-desc {
 			width: 90%;
