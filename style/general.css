@@ -617,6 +617,7 @@ input[type="date"]{
     height: 100px;
     object-fit: contain;
     padding: 10px;
+  
  }
  .detail-box{
     display: grid;
@@ -642,15 +643,36 @@ input[type="date"]{
     font-weight: 500;
  }
 
- #cart-remove{
-    
-    font-size: 24px;
-    color: black;
+  
+form{
+	display: flex;
+}
+
+
+
+.product-count .qtyminus,
+.product-count .qtyplus {
+	width: 34px;
+    height: 34px;
+    background: #212529;
+    text-align: center;
+    font-size: 19px;
+    line-height: 36px;
+    color: #fff;
     cursor: pointer;
- }
- #cart-remove:hover{
-    color: red;
- }
+}
+.product-count .qtyminus {
+	border-radius: 3px 0 0 3px; 
+}
+.product-count .qtyplus {
+	border-radius: 0 3px 3px 0; 
+}
+.product-count .qty {
+	width: 60px;
+	text-align: center;
+}
+
+
 
  .total {
     display: flex;
