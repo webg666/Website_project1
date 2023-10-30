@@ -2,7 +2,7 @@
 #Hero{
 
     font-size: 130%;
-    background-image: url(../img/banner/Main1.jpg);
+    background-image: url(../img/banner/Final.png);
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -480,7 +480,7 @@
 
   #Hero {
       align-items: center;
-    background-image: url(../img/banner/Main-tablet.jpg);
+    background-image: url(../img/banner/Final.png);
     }
 
     #Hero h4 {
@@ -565,7 +565,7 @@
      #Hero{
     
       font-size: 100%;
-      background-image: url(../img/banner/Final-responsive.jpg.png);
+      background-image: url(../img/banner/final-responsive.png);
       background-position: top 0% right 0%;
       background-size: cover;
       background-position:  69%;

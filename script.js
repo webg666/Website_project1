@@ -413,6 +413,9 @@ closecart.onclick = () => {
 
 
 
+
+
+
     /* Sproducts */
     const activeImage = document.querySelector(".product-image .active");
     const productImages = document.querySelectorAll(".product-thumb img");
@@ -453,3 +456,9 @@ const observer = new IntersectionObserver((entries) => {
   });
 
 });
+
+
+
+
+
+

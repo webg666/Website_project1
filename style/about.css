@@ -115,6 +115,7 @@ article {
     background-repeat: no-repeat;
     position: relative;
     text-align: center;
+    background-color: rgb(255, 250, 245);
 }
 
 .centered {
